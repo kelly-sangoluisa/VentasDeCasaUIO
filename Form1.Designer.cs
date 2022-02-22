@@ -55,9 +55,10 @@
             // 
             this.lblBienvenidos.AutoSize = true;
             this.lblBienvenidos.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenidos.Location = new System.Drawing.Point(219, 9);
+            this.lblBienvenidos.Location = new System.Drawing.Point(161, 7);
+            this.lblBienvenidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBienvenidos.Name = "lblBienvenidos";
-            this.lblBienvenidos.Size = new System.Drawing.Size(517, 117);
+            this.lblBienvenidos.Size = new System.Drawing.Size(419, 93);
             this.lblBienvenidos.TabIndex = 0;
             this.lblBienvenidos.Text = "Bienvenidos a ventas de casas UIO,\r\n    encuentra la casa de tus sueños\r\n\r\n";
             this.lblBienvenidos.Click += new System.EventHandler(this.label1_Click);
@@ -65,54 +66,60 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(69, 119);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(52, 93);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(127, 18);
+            this.lblNombre.Size = new System.Drawing.Size(92, 13);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Ingresa tu nombre";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(236, 115);
+            this.txtNombre.Location = new System.Drawing.Point(177, 86);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(202, 22);
+            this.txtNombre.Size = new System.Drawing.Size(152, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // lblPresupuesto
             // 
             this.lblPresupuesto.AutoSize = true;
-            this.lblPresupuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPresupuesto.Location = new System.Drawing.Point(69, 172);
+            this.lblPresupuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresupuesto.Location = new System.Drawing.Point(52, 134);
+            this.lblPresupuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPresupuesto.Name = "lblPresupuesto";
-            this.lblPresupuesto.Size = new System.Drawing.Size(158, 18);
+            this.lblPresupuesto.Size = new System.Drawing.Size(115, 13);
             this.lblPresupuesto.TabIndex = 3;
             this.lblPresupuesto.Text = "Ingresa tu presupuesto";
             // 
             // txtPresupuesto
             // 
-            this.txtPresupuesto.Location = new System.Drawing.Point(236, 168);
+            this.txtPresupuesto.Location = new System.Drawing.Point(177, 127);
+            this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPresupuesto.Name = "txtPresupuesto";
-            this.txtPresupuesto.Size = new System.Drawing.Size(202, 22);
+            this.txtPresupuesto.Size = new System.Drawing.Size(152, 20);
             this.txtPresupuesto.TabIndex = 4;
             // 
             // lblModelo
             // 
             this.lblModelo.AutoSize = true;
-            this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModelo.Location = new System.Drawing.Point(69, 222);
+            this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelo.Location = new System.Drawing.Point(52, 187);
+            this.lblModelo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(125, 18);
+            this.lblModelo.Size = new System.Drawing.Size(90, 13);
             this.lblModelo.TabIndex = 5;
             this.lblModelo.Text = "Ingresa el modelo";
             // 
             // rdbVivienda
             // 
             this.rdbVivienda.AutoSize = true;
-            this.rdbVivienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbVivienda.Location = new System.Drawing.Point(236, 222);
+            this.rdbVivienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbVivienda.Location = new System.Drawing.Point(177, 166);
+            this.rdbVivienda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbVivienda.Name = "rdbVivienda";
-            this.rdbVivienda.Size = new System.Drawing.Size(83, 22);
+            this.rdbVivienda.Size = new System.Drawing.Size(66, 17);
             this.rdbVivienda.TabIndex = 6;
             this.rdbVivienda.TabStop = true;
             this.rdbVivienda.Text = "Vivienda";
@@ -121,10 +128,11 @@
             // rdbCondominio
             // 
             this.rdbCondominio.AutoSize = true;
-            this.rdbCondominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbCondominio.Location = new System.Drawing.Point(236, 248);
+            this.rdbCondominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbCondominio.Location = new System.Drawing.Point(177, 188);
+            this.rdbCondominio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbCondominio.Name = "rdbCondominio";
-            this.rdbCondominio.Size = new System.Drawing.Size(110, 22);
+            this.rdbCondominio.Size = new System.Drawing.Size(80, 17);
             this.rdbCondominio.TabIndex = 7;
             this.rdbCondominio.TabStop = true;
             this.rdbCondominio.Text = "Condominio";
@@ -133,10 +141,11 @@
             // rdbDepartamento
             // 
             this.rdbDepartamento.AutoSize = true;
-            this.rdbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbDepartamento.Location = new System.Drawing.Point(236, 274);
+            this.rdbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbDepartamento.Location = new System.Drawing.Point(177, 209);
+            this.rdbDepartamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbDepartamento.Name = "rdbDepartamento";
-            this.rdbDepartamento.Size = new System.Drawing.Size(123, 22);
+            this.rdbDepartamento.Size = new System.Drawing.Size(92, 17);
             this.rdbDepartamento.TabIndex = 8;
             this.rdbDepartamento.TabStop = true;
             this.rdbDepartamento.Text = "Departamento";
@@ -145,115 +154,123 @@
             // lblCuartos
             // 
             this.lblCuartos.AutoSize = true;
-            this.lblCuartos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuartos.Location = new System.Drawing.Point(572, 119);
+            this.lblCuartos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuartos.Location = new System.Drawing.Point(433, 80);
+            this.lblCuartos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCuartos.Name = "lblCuartos";
-            this.lblCuartos.Size = new System.Drawing.Size(61, 18);
+            this.lblCuartos.Size = new System.Drawing.Size(43, 13);
             this.lblCuartos.TabIndex = 9;
             this.lblCuartos.Text = "Cuartos";
             // 
             // txtCuartos
             // 
-            this.txtCuartos.Location = new System.Drawing.Point(651, 111);
-            this.txtCuartos.Multiline = true;
+            this.txtCuartos.Location = new System.Drawing.Point(501, 80);
+            this.txtCuartos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCuartos.Name = "txtCuartos";
-            this.txtCuartos.Size = new System.Drawing.Size(40, 44);
+            this.txtCuartos.Size = new System.Drawing.Size(31, 20);
             this.txtCuartos.TabIndex = 10;
             // 
             // lblParques
             // 
             this.lblParques.AutoSize = true;
-            this.lblParques.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParques.Location = new System.Drawing.Point(572, 172);
+            this.lblParques.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParques.Location = new System.Drawing.Point(433, 123);
+            this.lblParques.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblParques.Name = "lblParques";
-            this.lblParques.Size = new System.Drawing.Size(63, 18);
+            this.lblParques.Size = new System.Drawing.Size(46, 13);
             this.lblParques.TabIndex = 11;
             this.lblParques.Text = "Parques";
             // 
             // txtParques
             // 
-            this.txtParques.Location = new System.Drawing.Point(651, 168);
-            this.txtParques.Multiline = true;
+            this.txtParques.Location = new System.Drawing.Point(501, 123);
+            this.txtParques.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtParques.Name = "txtParques";
-            this.txtParques.Size = new System.Drawing.Size(40, 42);
+            this.txtParques.Size = new System.Drawing.Size(31, 20);
             this.txtParques.TabIndex = 12;
             // 
             // lblEscuelas
             // 
             this.lblEscuelas.AutoSize = true;
-            this.lblEscuelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEscuelas.Location = new System.Drawing.Point(572, 228);
+            this.lblEscuelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEscuelas.Location = new System.Drawing.Point(433, 168);
+            this.lblEscuelas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEscuelas.Name = "lblEscuelas";
-            this.lblEscuelas.Size = new System.Drawing.Size(69, 18);
+            this.lblEscuelas.Size = new System.Drawing.Size(50, 13);
             this.lblEscuelas.TabIndex = 13;
             this.lblEscuelas.Text = "Escuelas";
             // 
             // txtEscuelas
             // 
-            this.txtEscuelas.Location = new System.Drawing.Point(651, 228);
-            this.txtEscuelas.Multiline = true;
+            this.txtEscuelas.Location = new System.Drawing.Point(501, 163);
+            this.txtEscuelas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEscuelas.Name = "txtEscuelas";
-            this.txtEscuelas.Size = new System.Drawing.Size(40, 42);
+            this.txtEscuelas.Size = new System.Drawing.Size(31, 20);
             this.txtEscuelas.TabIndex = 14;
             // 
             // lblBaños
             // 
             this.lblBaños.AutoSize = true;
-            this.lblBaños.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaños.Location = new System.Drawing.Point(742, 121);
+            this.lblBaños.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaños.Location = new System.Drawing.Point(573, 80);
+            this.lblBaños.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBaños.Name = "lblBaños";
-            this.lblBaños.Size = new System.Drawing.Size(51, 18);
+            this.lblBaños.Size = new System.Drawing.Size(37, 13);
             this.lblBaños.TabIndex = 15;
             this.lblBaños.Text = "Baños";
             // 
             // txtBaños
             // 
-            this.txtBaños.Location = new System.Drawing.Point(838, 111);
-            this.txtBaños.Multiline = true;
+            this.txtBaños.Location = new System.Drawing.Point(628, 77);
+            this.txtBaños.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBaños.Name = "txtBaños";
-            this.txtBaños.Size = new System.Drawing.Size(40, 44);
+            this.txtBaños.Size = new System.Drawing.Size(31, 20);
             this.txtBaños.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(742, 168);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(568, 121);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 32);
+            this.label1.Size = new System.Drawing.Size(63, 26);
             this.label1.TabIndex = 17;
             this.label1.Text = "Centros \r\ncomerciales\r\n";
             // 
             // txtCentrosComerciales
             // 
-            this.txtCentrosComerciales.Location = new System.Drawing.Point(838, 165);
-            this.txtCentrosComerciales.Multiline = true;
+            this.txtCentrosComerciales.Location = new System.Drawing.Point(635, 123);
+            this.txtCentrosComerciales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCentrosComerciales.Name = "txtCentrosComerciales";
-            this.txtCentrosComerciales.Size = new System.Drawing.Size(40, 44);
+            this.txtCentrosComerciales.Size = new System.Drawing.Size(31, 20);
             this.txtCentrosComerciales.TabIndex = 18;
             // 
             // lblTransporte
             // 
             this.lblTransporte.AutoSize = true;
-            this.lblTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransporte.Location = new System.Drawing.Point(742, 229);
+            this.lblTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransporte.Location = new System.Drawing.Point(568, 170);
+            this.lblTransporte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTransporte.Name = "lblTransporte";
-            this.lblTransporte.Size = new System.Drawing.Size(80, 18);
+            this.lblTransporte.Size = new System.Drawing.Size(58, 13);
             this.lblTransporte.TabIndex = 19;
             this.lblTransporte.Text = "Transporte";
+            this.lblTransporte.Click += new System.EventHandler(this.lblTransporte_Click);
             // 
             // txtTransporte
             // 
-            this.txtTransporte.Location = new System.Drawing.Point(838, 226);
-            this.txtTransporte.Multiline = true;
+            this.txtTransporte.Location = new System.Drawing.Point(635, 168);
+            this.txtTransporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTransporte.Name = "txtTransporte";
-            this.txtTransporte.Size = new System.Drawing.Size(40, 44);
+            this.txtTransporte.Size = new System.Drawing.Size(31, 20);
             this.txtTransporte.TabIndex = 20;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 827);
+            this.ClientSize = new System.Drawing.Size(729, 609);
             this.Controls.Add(this.txtTransporte);
             this.Controls.Add(this.lblTransporte);
             this.Controls.Add(this.txtCentrosComerciales);
@@ -275,9 +292,9 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblBienvenidos);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

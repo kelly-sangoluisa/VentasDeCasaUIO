@@ -31,5 +31,15 @@ namespace VentasDeCasaUIO
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTransporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
