@@ -59,7 +59,6 @@
             this.rbtnEfectivo = new System.Windows.Forms.RadioButton();
             this.lblComprar = new System.Windows.Forms.Label();
             this.btnIntenteDeNuevo = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.rbtnNoEspaciosVerdes = new System.Windows.Forms.RadioButton();
             this.rbtnSiEspaciosVerdes = new System.Windows.Forms.RadioButton();
@@ -74,6 +73,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.gboxModelo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -319,7 +319,7 @@
             // 
             // btnCompar
             // 
-            this.btnCompar.Location = new System.Drawing.Point(321, 460);
+            this.btnCompar.Location = new System.Drawing.Point(321, 449);
             this.btnCompar.Name = "btnCompar";
             this.btnCompar.Size = new System.Drawing.Size(88, 23);
             this.btnCompar.TabIndex = 23;
@@ -328,10 +328,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 489);
+            this.textBox1.Location = new System.Drawing.Point(177, 478);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(393, 79);
+            this.textBox1.Size = new System.Drawing.Size(393, 90);
             this.textBox1.TabIndex = 24;
             // 
             // txtCuotas
@@ -375,11 +375,12 @@
             // lblComprar
             // 
             this.lblComprar.AutoSize = true;
-            this.lblComprar.Location = new System.Drawing.Point(331, 407);
+            this.lblComprar.Location = new System.Drawing.Point(328, 407);
             this.lblComprar.Name = "lblComprar";
             this.lblComprar.Size = new System.Drawing.Size(72, 13);
             this.lblComprar.TabIndex = 38;
             this.lblComprar.Text = "Comprarla en:";
+            this.lblComprar.Click += new System.EventHandler(this.lblComprar_Click);
             // 
             // btnIntenteDeNuevo
             // 
@@ -389,14 +390,6 @@
             this.btnIntenteDeNuevo.TabIndex = 37;
             this.btnIntenteDeNuevo.Text = "Intentelo de nuevo";
             this.btnIntenteDeNuevo.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(69, 306);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(544, 98);
-            this.richTextBox1.TabIndex = 36;
-            this.richTextBox1.Text = "";
             // 
             // btnBuscar
             // 
@@ -543,11 +536,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(110, 306);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(510, 98);
+            this.textBox2.TabIndex = 46;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 609);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -557,7 +559,6 @@
             this.Controls.Add(this.rbtnEfectivo);
             this.Controls.Add(this.lblComprar);
             this.Controls.Add(this.btnIntenteDeNuevo);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblEspaciosVerdes);
             this.Controls.Add(this.lblParqueaderos);
@@ -633,7 +634,6 @@
         private System.Windows.Forms.RadioButton rbtnEfectivo;
         private System.Windows.Forms.Label lblComprar;
         private System.Windows.Forms.Button btnIntenteDeNuevo;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.RadioButton rbtnNoEspaciosVerdes;
         private System.Windows.Forms.RadioButton rbtnSiEspaciosVerdes;
@@ -648,6 +648,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

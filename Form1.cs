@@ -66,5 +66,10 @@ namespace VentasDeCasaUIO
         {
 
         }
+
+        private void lblComprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
