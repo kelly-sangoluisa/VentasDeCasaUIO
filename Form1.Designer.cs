@@ -49,6 +49,8 @@
             this.txtCentrosComerciales = new System.Windows.Forms.TextBox();
             this.lblTransporte = new System.Windows.Forms.Label();
             this.txtTransporte = new System.Windows.Forms.TextBox();
+            this.gboxModelo = new System.Windows.Forms.GroupBox();
+            this.gboxModelo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBienvenidos
@@ -77,7 +79,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(177, 86);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(152, 20);
             this.txtNombre.TabIndex = 2;
@@ -96,7 +98,7 @@
             // txtPresupuesto
             // 
             this.txtPresupuesto.Location = new System.Drawing.Point(177, 127);
-            this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(2);
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Size = new System.Drawing.Size(152, 20);
             this.txtPresupuesto.TabIndex = 4;
@@ -116,8 +118,8 @@
             // 
             this.rdbVivienda.AutoSize = true;
             this.rdbVivienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbVivienda.Location = new System.Drawing.Point(177, 166);
-            this.rdbVivienda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbVivienda.Location = new System.Drawing.Point(5, 7);
+            this.rdbVivienda.Margin = new System.Windows.Forms.Padding(2);
             this.rdbVivienda.Name = "rdbVivienda";
             this.rdbVivienda.Size = new System.Drawing.Size(66, 17);
             this.rdbVivienda.TabIndex = 6;
@@ -129,8 +131,8 @@
             // 
             this.rdbCondominio.AutoSize = true;
             this.rdbCondominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbCondominio.Location = new System.Drawing.Point(177, 188);
-            this.rdbCondominio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbCondominio.Location = new System.Drawing.Point(5, 29);
+            this.rdbCondominio.Margin = new System.Windows.Forms.Padding(2);
             this.rdbCondominio.Name = "rdbCondominio";
             this.rdbCondominio.Size = new System.Drawing.Size(80, 17);
             this.rdbCondominio.TabIndex = 7;
@@ -142,14 +144,15 @@
             // 
             this.rdbDepartamento.AutoSize = true;
             this.rdbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbDepartamento.Location = new System.Drawing.Point(177, 209);
-            this.rdbDepartamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbDepartamento.Location = new System.Drawing.Point(5, 50);
+            this.rdbDepartamento.Margin = new System.Windows.Forms.Padding(2);
             this.rdbDepartamento.Name = "rdbDepartamento";
             this.rdbDepartamento.Size = new System.Drawing.Size(92, 17);
             this.rdbDepartamento.TabIndex = 8;
             this.rdbDepartamento.TabStop = true;
             this.rdbDepartamento.Text = "Departamento";
             this.rdbDepartamento.UseVisualStyleBackColor = true;
+            this.rdbDepartamento.CheckedChanged += new System.EventHandler(this.rdbDepartamento_CheckedChanged);
             // 
             // lblCuartos
             // 
@@ -165,7 +168,7 @@
             // txtCuartos
             // 
             this.txtCuartos.Location = new System.Drawing.Point(501, 80);
-            this.txtCuartos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCuartos.Margin = new System.Windows.Forms.Padding(2);
             this.txtCuartos.Name = "txtCuartos";
             this.txtCuartos.Size = new System.Drawing.Size(31, 20);
             this.txtCuartos.TabIndex = 10;
@@ -184,7 +187,7 @@
             // txtParques
             // 
             this.txtParques.Location = new System.Drawing.Point(501, 123);
-            this.txtParques.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParques.Margin = new System.Windows.Forms.Padding(2);
             this.txtParques.Name = "txtParques";
             this.txtParques.Size = new System.Drawing.Size(31, 20);
             this.txtParques.TabIndex = 12;
@@ -203,7 +206,7 @@
             // txtEscuelas
             // 
             this.txtEscuelas.Location = new System.Drawing.Point(501, 163);
-            this.txtEscuelas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEscuelas.Margin = new System.Windows.Forms.Padding(2);
             this.txtEscuelas.Name = "txtEscuelas";
             this.txtEscuelas.Size = new System.Drawing.Size(31, 20);
             this.txtEscuelas.TabIndex = 14;
@@ -222,7 +225,7 @@
             // txtBaños
             // 
             this.txtBaños.Location = new System.Drawing.Point(628, 77);
-            this.txtBaños.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBaños.Margin = new System.Windows.Forms.Padding(2);
             this.txtBaños.Name = "txtBaños";
             this.txtBaños.Size = new System.Drawing.Size(31, 20);
             this.txtBaños.TabIndex = 16;
@@ -241,7 +244,7 @@
             // txtCentrosComerciales
             // 
             this.txtCentrosComerciales.Location = new System.Drawing.Point(635, 123);
-            this.txtCentrosComerciales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCentrosComerciales.Margin = new System.Windows.Forms.Padding(2);
             this.txtCentrosComerciales.Name = "txtCentrosComerciales";
             this.txtCentrosComerciales.Size = new System.Drawing.Size(31, 20);
             this.txtCentrosComerciales.TabIndex = 18;
@@ -261,16 +264,29 @@
             // txtTransporte
             // 
             this.txtTransporte.Location = new System.Drawing.Point(635, 168);
-            this.txtTransporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTransporte.Margin = new System.Windows.Forms.Padding(2);
             this.txtTransporte.Name = "txtTransporte";
             this.txtTransporte.Size = new System.Drawing.Size(31, 20);
             this.txtTransporte.TabIndex = 20;
+            // 
+            // gboxModelo
+            // 
+            this.gboxModelo.Controls.Add(this.rdbVivienda);
+            this.gboxModelo.Controls.Add(this.rdbCondominio);
+            this.gboxModelo.Controls.Add(this.rdbDepartamento);
+            this.gboxModelo.Location = new System.Drawing.Point(177, 163);
+            this.gboxModelo.Name = "gboxModelo";
+            this.gboxModelo.Size = new System.Drawing.Size(105, 75);
+            this.gboxModelo.TabIndex = 21;
+            this.gboxModelo.TabStop = false;
+            this.gboxModelo.Enter += new System.EventHandler(this.gboxModelo_Enter);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 609);
+            this.Controls.Add(this.gboxModelo);
             this.Controls.Add(this.txtTransporte);
             this.Controls.Add(this.lblTransporte);
             this.Controls.Add(this.txtCentrosComerciales);
@@ -283,9 +299,6 @@
             this.Controls.Add(this.lblParques);
             this.Controls.Add(this.txtCuartos);
             this.Controls.Add(this.lblCuartos);
-            this.Controls.Add(this.rdbDepartamento);
-            this.Controls.Add(this.rdbCondominio);
-            this.Controls.Add(this.rdbVivienda);
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.txtPresupuesto);
             this.Controls.Add(this.lblPresupuesto);
@@ -295,6 +308,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.gboxModelo.ResumeLayout(false);
+            this.gboxModelo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,6 +338,7 @@
         private System.Windows.Forms.TextBox txtCentrosComerciales;
         private System.Windows.Forms.Label lblTransporte;
         private System.Windows.Forms.TextBox txtTransporte;
+        private System.Windows.Forms.GroupBox gboxModelo;
     }
 }
 

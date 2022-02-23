@@ -41,5 +41,15 @@ namespace VentasDeCasaUIO
         {
 
         }
+
+        private void rdbDepartamento_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gboxModelo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
