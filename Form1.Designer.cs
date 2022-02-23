@@ -50,6 +50,9 @@
             this.lblTransporte = new System.Windows.Forms.Label();
             this.txtTransporte = new System.Windows.Forms.TextBox();
             this.gboxModelo = new System.Windows.Forms.GroupBox();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnCompar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gboxModelo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -281,11 +284,40 @@
             this.gboxModelo.TabStop = false;
             this.gboxModelo.Enter += new System.EventHandler(this.gboxModelo_Enter);
             // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Location = new System.Drawing.Point(328, 574);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmar.TabIndex = 22;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            // 
+            // btnCompar
+            // 
+            this.btnCompar.Location = new System.Drawing.Point(328, 460);
+            this.btnCompar.Name = "btnCompar";
+            this.btnCompar.Size = new System.Drawing.Size(75, 23);
+            this.btnCompar.TabIndex = 23;
+            this.btnCompar.Text = "Comprar";
+            this.btnCompar.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(177, 489);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(393, 79);
+            this.textBox1.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 609);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCompar);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.gboxModelo);
             this.Controls.Add(this.txtTransporte);
             this.Controls.Add(this.lblTransporte);
@@ -339,6 +371,9 @@
         private System.Windows.Forms.Label lblTransporte;
         private System.Windows.Forms.TextBox txtTransporte;
         private System.Windows.Forms.GroupBox gboxModelo;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnCompar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
