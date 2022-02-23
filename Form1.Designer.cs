@@ -74,10 +74,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gboxModelo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBienvenidos
@@ -310,16 +312,17 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(321, 574);
+            this.btnConfirmar.Location = new System.Drawing.Point(311, 574);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(88, 23);
+            this.btnConfirmar.Size = new System.Drawing.Size(115, 23);
             this.btnConfirmar.TabIndex = 22;
             this.btnConfirmar.Text = "CONFIRMAR";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCompar
             // 
-            this.btnCompar.Location = new System.Drawing.Point(321, 449);
+            this.btnCompar.Location = new System.Drawing.Point(321, 459);
             this.btnCompar.Name = "btnCompar";
             this.btnCompar.Size = new System.Drawing.Size(88, 23);
             this.btnCompar.TabIndex = 23;
@@ -328,10 +331,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 478);
+            this.textBox1.Location = new System.Drawing.Point(188, 488);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(393, 90);
+            this.textBox1.Size = new System.Drawing.Size(354, 80);
             this.textBox1.TabIndex = 24;
             // 
             // txtCuotas
@@ -353,7 +356,7 @@
             // rbtnCredito
             // 
             this.rbtnCredito.AutoSize = true;
-            this.rbtnCredito.Location = new System.Drawing.Point(467, 433);
+            this.rbtnCredito.Location = new System.Drawing.Point(285, 10);
             this.rbtnCredito.Name = "rbtnCredito";
             this.rbtnCredito.Size = new System.Drawing.Size(58, 17);
             this.rbtnCredito.TabIndex = 40;
@@ -364,7 +367,7 @@
             // rbtnEfectivo
             // 
             this.rbtnEfectivo.AutoSize = true;
-            this.rbtnEfectivo.Location = new System.Drawing.Point(226, 433);
+            this.rbtnEfectivo.Location = new System.Drawing.Point(6, 10);
             this.rbtnEfectivo.Name = "rbtnEfectivo";
             this.rbtnEfectivo.Size = new System.Drawing.Size(64, 17);
             this.rbtnEfectivo.TabIndex = 39;
@@ -544,19 +547,28 @@
             this.textBox2.Size = new System.Drawing.Size(510, 98);
             this.textBox2.TabIndex = 46;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rbtnEfectivo);
+            this.groupBox4.Controls.Add(this.rbtnCredito);
+            this.groupBox4.Location = new System.Drawing.Point(182, 420);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(360, 33);
+            this.groupBox4.TabIndex = 47;
+            this.groupBox4.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 609);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtCuotas);
             this.Controls.Add(this.lblCuotas);
-            this.Controls.Add(this.rbtnCredito);
-            this.Controls.Add(this.rbtnEfectivo);
             this.Controls.Add(this.lblComprar);
             this.Controls.Add(this.btnIntenteDeNuevo);
             this.Controls.Add(this.btnBuscar);
@@ -596,6 +608,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -649,6 +663,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

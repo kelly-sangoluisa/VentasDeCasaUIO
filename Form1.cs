@@ -71,5 +71,12 @@ namespace VentasDeCasaUIO
         {
 
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            Agradecimiento agradecimiento = new Agradecimiento();
+            agradecimiento.Show();
+            this.Hide();
+        }
     }
 }
