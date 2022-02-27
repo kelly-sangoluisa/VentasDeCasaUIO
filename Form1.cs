@@ -114,7 +114,18 @@ namespace VentasDeCasaUIO
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Persona persona1 = new Persona();
+            Casa casaDeseada = new Casa();
 
+            // CAMBIAR LA VARIABLE DE CENTROS COMERCIALES
+            persona1.nombre = txtNombre.Text; //obtener el texto de un text box
+            persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
+            casaDeseada.cuartos = int.Parse(txtCuartos.Text);
+            casaDeseada.lugarCasa.parques = int.Parse(txtParques.Text);
+            casaDeseada.lugarCasa.escuelas = int.Parse(txtEscuelas.Text);
+            casaDeseada.banos = int.Parse(txtBanos.Text);
+            casaDeseada.lugarCasa.centrosComerciales = int.Parse(txtCeCo.Text);
+            casaDeseada.lugarCasa.transporte = int.Parse(txtTransporte.Text);
         }
     }
 }
