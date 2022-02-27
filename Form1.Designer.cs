@@ -44,9 +44,9 @@
             this.lblEscuelas = new System.Windows.Forms.Label();
             this.txtEscuelas = new System.Windows.Forms.TextBox();
             this.lblBaños = new System.Windows.Forms.Label();
-            this.txtBaños = new System.Windows.Forms.TextBox();
+            this.txtBanos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCentrosComerciales = new System.Windows.Forms.TextBox();
+            this.txtCeCo = new System.Windows.Forms.TextBox();
             this.lblTransporte = new System.Windows.Forms.Label();
             this.txtTransporte = new System.Windows.Forms.TextBox();
             this.gboxModelo = new System.Windows.Forms.GroupBox();
@@ -251,13 +251,13 @@
             this.lblBaños.TabIndex = 15;
             this.lblBaños.Text = "Baños:";
             // 
-            // txtBaños
+            // txtBanos
             // 
-            this.txtBaños.Location = new System.Drawing.Point(628, 77);
-            this.txtBaños.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBaños.Name = "txtBaños";
-            this.txtBaños.Size = new System.Drawing.Size(31, 20);
-            this.txtBaños.TabIndex = 16;
+            this.txtBanos.Location = new System.Drawing.Point(628, 77);
+            this.txtBanos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBanos.Name = "txtBanos";
+            this.txtBanos.Size = new System.Drawing.Size(31, 20);
+            this.txtBanos.TabIndex = 16;
             // 
             // label1
             // 
@@ -270,13 +270,13 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Centros \r\ncomerciales\r\n";
             // 
-            // txtCentrosComerciales
+            // txtCeCo
             // 
-            this.txtCentrosComerciales.Location = new System.Drawing.Point(635, 123);
-            this.txtCentrosComerciales.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCentrosComerciales.Name = "txtCentrosComerciales";
-            this.txtCentrosComerciales.Size = new System.Drawing.Size(31, 20);
-            this.txtCentrosComerciales.TabIndex = 18;
+            this.txtCeCo.Location = new System.Drawing.Point(635, 123);
+            this.txtCeCo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCeCo.Name = "txtCeCo";
+            this.txtCeCo.Size = new System.Drawing.Size(31, 20);
+            this.txtCeCo.TabIndex = 18;
             // 
             // lblTransporte
             // 
@@ -582,9 +582,9 @@
             this.Controls.Add(this.gboxModelo);
             this.Controls.Add(this.txtTransporte);
             this.Controls.Add(this.lblTransporte);
-            this.Controls.Add(this.txtCentrosComerciales);
+            this.Controls.Add(this.txtCeCo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtBaños);
+            this.Controls.Add(this.txtBanos);
             this.Controls.Add(this.lblBaños);
             this.Controls.Add(this.txtEscuelas);
             this.Controls.Add(this.lblEscuelas);
@@ -634,9 +634,9 @@
         private System.Windows.Forms.Label lblEscuelas;
         private System.Windows.Forms.TextBox txtEscuelas;
         private System.Windows.Forms.Label lblBaños;
-        private System.Windows.Forms.TextBox txtBaños;
+        private System.Windows.Forms.TextBox txtBanos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCentrosComerciales;
+        private System.Windows.Forms.TextBox txtCeCo;
         private System.Windows.Forms.Label lblTransporte;
         private System.Windows.Forms.TextBox txtTransporte;
         private System.Windows.Forms.GroupBox gboxModelo;
