@@ -10,6 +10,39 @@ using System.Windows.Forms;
 
 namespace VentasDeCasaUIO
 {
+    //estructuras persona
+    public struct Persona
+    {
+        public string nombre { get; set; }
+        public double presupuesto;
+    }
+    //estructura lugar
+    public struct Lugar
+    {
+        public string sector { get; set; } //norte, sur, centro
+        public int parques;
+        public int escuelas;
+        public int centrosComerciales;
+        public int transporte;
+    }
+    //estructura casa
+    public struct Casa
+    {
+        public Lugar lugarCasa;
+        public string modelo { get; set; } //tipo departamento, vivienda, condominio 
+        public int cuartos;
+        public int banos;
+        public string parqueaderos { get; set; }
+        public string espacioVerdes { get; set; }
+        public double precioCasa;
+    }
+    //estructura credito
+    public struct Credito
+    {
+        public double presupuestoInicial;
+        public int numeroCuotas;
+        public int cuotasMaxima;
+    }
     public partial class Form1 : Form
     {
         public Form1()
@@ -77,6 +110,11 @@ namespace VentasDeCasaUIO
             Agradecimiento agradecimiento = new Agradecimiento();
             agradecimiento.Show();
             this.Hide();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
