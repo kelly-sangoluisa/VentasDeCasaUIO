@@ -126,6 +126,51 @@ namespace VentasDeCasaUIO
             casaDeseada.banos = int.Parse(txtBanos.Text);
             casaDeseada.lugarCasa.centrosComerciales = int.Parse(txtCeCo.Text);
             casaDeseada.lugarCasa.transporte = int.Parse(txtTransporte.Text);
+            //ASIGNACION DE RADIO BUTTONS
+            if (rbCentro.Checked)
+            {
+                casaDeseada.lugarCasa.sector = "Centro";
+            }
+            else if (rbSur.Checked)
+            {
+                casaDeseada.lugarCasa.sector = "Sur";
+            }
+            else if (rbNorte.Checked)
+            {
+                casaDeseada.lugarCasa.sector = "Norte";
+            }
+            if (rbSiP.Checked)
+            {
+                casaDeseada.parqueaderos = "Si";
+            }
+            else if (rbNoP.Checked)
+            {
+                casaDeseada.parqueaderos = "No";
+            }
+            if (rbSiE.Checked)
+            {
+                casaDeseada.espacioVerdes = "Si";
+            }
+
+            else if (rbNoE.Checked)
+            {
+                casaDeseada.espacioVerdes = "No";
+
+            }
+            if (rbVivienda.Checked)
+            {
+                casaDeseada.modelo = "Vivienda";
+            }
+            else if (rbCondominio.Checked)
+            {
+                casaDeseada.modelo = "Condominio";
+            }
+            else if (rbDepartamento.Checked)
+            {
+                casaDeseada.modelo = "Departamento";
+            }
+            txaBusqueda.Clear();
+
         }
     }
 }
