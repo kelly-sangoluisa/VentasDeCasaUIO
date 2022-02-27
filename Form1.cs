@@ -52,6 +52,8 @@ namespace VentasDeCasaUIO
         public Form1()
         {
             InitializeComponent();
+            txtCuotas.Hide();
+            lbCuotas.Hide();
         }
         public void busquedaCasa(Casa[] casa2, int tamanio, Casa casaDeseada, Persona p1)
         {
@@ -379,8 +381,8 @@ namespace VentasDeCasaUIO
             casasRegistradas[19].parqueaderos = "Si";
             casasRegistradas[19].espacioVerdes = "No";
             casasRegistradas[19].precioCasa = 55000;
-
             //casas al Sur
+            //21
             casasRegistradas[20].lugarCasa.sector = "Sur";
             casasRegistradas[20].lugarCasa.parques = 2;
             casasRegistradas[20].lugarCasa.escuelas = 3;
@@ -560,6 +562,21 @@ namespace VentasDeCasaUIO
             txaBusqueda.Clear();
             //llamada a la funcion busqueda
             busquedaCasa(casasRegistradas, n, casaDeseada, persona1);
+        }
+
+        private void rbtnCredito_CheckedChanged(object sender, EventArgs e)
+        {
+            //para mostar el text de cuotas cuando este señanalado cuotas
+            if (rbCredito.Checked)
+            {
+                txtCuotas.Show();
+                lbCuotas.Show();
+            }
+            else
+            {
+                txtCuotas.Hide();
+                lbCuotas.Hide();
+            }
         }
     }
 }
