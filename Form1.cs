@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace VentasDeCasaUIO
 {
+    
     //estructuras persona
     public struct Persona
     {
@@ -52,69 +53,85 @@ namespace VentasDeCasaUIO
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void busquedaCasa(Casa[] casa2, int tamanio, Casa casaDeseada, Persona p1)
         {
-
+            for (int i = 0; i < tamanio; i++)
+            {
+                if (casa2[i].lugarCasa.sector.Equals(casaDeseada.lugarCasa.sector))
+                {
+                    if (casa2[i].lugarCasa.parques == casaDeseada.lugarCasa.parques)
+                    {
+                        if (casa2[i].lugarCasa.escuelas == casaDeseada.lugarCasa.escuelas)
+                        {
+                            if (casa2[i].lugarCasa.centrosComerciales == casaDeseada.lugarCasa.centrosComerciales)
+                            {
+                                if (casa2[i].lugarCasa.transporte == casaDeseada.lugarCasa.transporte)
+                                {
+                                    if (casa2[i].modelo.Equals(casaDeseada.modelo))
+                                    {
+                                        if (casa2[i].cuartos == casaDeseada.cuartos)
+                                        {
+                                            if (casa2[i].banos == casaDeseada.banos)
+                                            {
+                                                if (casa2[i].parqueaderos.Equals(casaDeseada.parqueaderos))
+                                                {
+                                                    if (casa2[i].espacioVerdes.Equals(casaDeseada.espacioVerdes))
+                                                    {
+                                                        if (casa2[i].precioCasa <= p1.presupuesto)
+                                                        {
+                                                            busqueda = i;
+                                                            encontrado = true;
+                                                            if (encontrado)
+                                                            {
+                                                                //mostrarCasa(casa2, p1, busqueda);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void lblTransporte_Click(object sender, EventArgs e)
         {
 
         }
-
         private void rdbDepartamento_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
         private void gboxModelo_Enter(object sender, EventArgs e)
         {
 
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }
-
         private void lblComprar_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Agradecimiento agradecimiento = new Agradecimiento();
             agradecimiento.Show();
             this.Hide();
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //COMIENZO DE RESGRITRO DE CASAS 
@@ -541,7 +558,8 @@ namespace VentasDeCasaUIO
                 casaDeseada.modelo = "Departamento";
             }
             txaBusqueda.Clear();
-
+            //llamada a la funcion busqueda
+            busquedaCasa(casasRegistradas, n, casaDeseada, persona1);
         }
     }
 }
