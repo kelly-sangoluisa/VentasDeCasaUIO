@@ -548,5 +548,255 @@ namespace VentasDeCasaUIO
                 lbCuotas.Hide();
             }
         }
+
+        private void btnCompar_Click(object sender, EventArgs e)
+        {
+            //COMIENZO DE RESGRITRO DE CASAS 
+            Casa[] casasRegistradas = new Casa[30]; //constructor de arreglo de casas a vender
+            //casas NORTE 
+            casasRegistradas[0].lugarCasa.sector = "Norte";
+            casasRegistradas[0].lugarCasa.parques = 1;
+            casasRegistradas[0].lugarCasa.escuelas = 2;
+            casasRegistradas[0].lugarCasa.centrosComerciales = 1;
+            casasRegistradas[0].lugarCasa.transporte = 2;
+            casasRegistradas[0].modelo = "Vivienda";
+            casasRegistradas[0].cuartos = 4;
+            casasRegistradas[0].banos = 2;
+            casasRegistradas[0].parqueaderos = "Si";
+            casasRegistradas[0].espacioVerdes = "No";
+            casasRegistradas[0].precioCasa = 490000;
+            //2
+            casasRegistradas[1].lugarCasa.sector = "Norte";
+            casasRegistradas[1].lugarCasa.parques = 1;
+            casasRegistradas[1].lugarCasa.escuelas = 2;
+            casasRegistradas[1].lugarCasa.centrosComerciales = 1;
+            casasRegistradas[1].lugarCasa.transporte = 2;
+            casasRegistradas[1].modelo = "Condominio";
+            casasRegistradas[1].cuartos = 1;
+            casasRegistradas[1].banos = 1;
+            casasRegistradas[1].parqueaderos = "No";
+            casasRegistradas[1].espacioVerdes = "No";
+            casasRegistradas[1].precioCasa = 25000;
+            //3
+            casasRegistradas[2].lugarCasa.sector = "Norte";
+            casasRegistradas[2].lugarCasa.parques = 2;
+            casasRegistradas[2].lugarCasa.escuelas = 1;
+            casasRegistradas[2].lugarCasa.centrosComerciales = 2;
+            casasRegistradas[2].lugarCasa.transporte = 1;
+            casasRegistradas[2].modelo = "Departamento";
+            casasRegistradas[2].cuartos = 2;
+            casasRegistradas[2].banos = 2;
+            casasRegistradas[2].parqueaderos = "Si";
+            casasRegistradas[2].espacioVerdes = "Si";
+            casasRegistradas[2].precioCasa = 400000;
+            //4
+            casasRegistradas[3].lugarCasa.sector = "Norte";
+            casasRegistradas[3].lugarCasa.parques = 0;
+            casasRegistradas[3].lugarCasa.escuelas = 0;
+            casasRegistradas[3].lugarCasa.centrosComerciales = 0;
+            casasRegistradas[3].lugarCasa.transporte = 0;
+            casasRegistradas[3].modelo = "Vivienda";
+            casasRegistradas[3].cuartos = 4;
+            casasRegistradas[3].banos = 2;
+            casasRegistradas[3].parqueaderos = "No";
+            casasRegistradas[3].espacioVerdes = "No";
+            casasRegistradas[3].precioCasa = 25000;
+            //5
+            casasRegistradas[4].lugarCasa.sector = "Norte";
+            casasRegistradas[4].lugarCasa.parques = 1;
+            casasRegistradas[4].lugarCasa.escuelas = 1;
+            casasRegistradas[4].lugarCasa.centrosComerciales = 1;
+            casasRegistradas[4].lugarCasa.transporte = 1;
+            casasRegistradas[4].modelo = "Departamento";
+            casasRegistradas[4].cuartos = 1;
+            casasRegistradas[4].banos = 1;
+            casasRegistradas[4].parqueaderos = "Si";
+            casasRegistradas[4].espacioVerdes = "Si";
+            casasRegistradas[4].precioCasa = 100000;
+            //6
+            casasRegistradas[5].lugarCasa.sector = "Norte";
+            casasRegistradas[5].lugarCasa.parques = 2;
+            casasRegistradas[5].lugarCasa.escuelas = 2;
+            casasRegistradas[5].lugarCasa.centrosComerciales = 1;
+            casasRegistradas[5].lugarCasa.transporte = 2;
+            casasRegistradas[5].modelo = "Condominio";
+            casasRegistradas[5].cuartos = 3;
+            casasRegistradas[5].banos = 2;
+            casasRegistradas[5].parqueaderos = "No";
+            casasRegistradas[5].espacioVerdes = "Si";
+            casasRegistradas[5].precioCasa = 50000;
+            //7
+            casasRegistradas[6].lugarCasa.sector = "Norte";
+            casasRegistradas[6].lugarCasa.parques = 0;
+            casasRegistradas[6].lugarCasa.escuelas = 0;
+            casasRegistradas[6].lugarCasa.centrosComerciales = 1;
+            casasRegistradas[6].lugarCasa.transporte = 2;
+            casasRegistradas[6].modelo = "Departamento";
+            casasRegistradas[6].cuartos = 1;
+            casasRegistradas[6].banos = 1;
+            casasRegistradas[6].parqueaderos = "No";
+            casasRegistradas[6].espacioVerdes = "No";
+            casasRegistradas[6].precioCasa = 955000;
+            //8
+            casasRegistradas[7].lugarCasa.sector = "Norte";
+            casasRegistradas[7].lugarCasa.parques = 1;
+            casasRegistradas[7].lugarCasa.escuelas = 1;
+            casasRegistradas[7].lugarCasa.centrosComerciales = 1;
+            casasRegistradas[7].lugarCasa.transporte = 2;
+            casasRegistradas[7].modelo = "Vivienda";
+            casasRegistradas[7].cuartos = 2;
+            casasRegistradas[7].banos = 2;
+            casasRegistradas[7].parqueaderos = "Si";
+            casasRegistradas[7].espacioVerdes = "Si";
+            casasRegistradas[7].precioCasa = 500000;
+            //9
+            casasRegistradas[8].lugarCasa.sector = "Norte";
+            casasRegistradas[8].lugarCasa.parques = 2;
+            casasRegistradas[8].lugarCasa.escuelas = 2;
+            casasRegistradas[8].lugarCasa.centrosComerciales = 2;
+            casasRegistradas[8].lugarCasa.transporte = 1;
+            casasRegistradas[8].modelo = "Vivienda";
+            casasRegistradas[8].cuartos = 5;
+            casasRegistradas[8].banos = 3;
+            casasRegistradas[8].parqueaderos = "No";
+            casasRegistradas[8].espacioVerdes = "Si";
+            casasRegistradas[8].precioCasa = 450000;
+            //10
+            casasRegistradas[9].lugarCasa.sector = "Norte";
+            casasRegistradas[9].lugarCasa.parques = 0;
+            casasRegistradas[9].lugarCasa.escuelas = 0;
+            casasRegistradas[9].lugarCasa.centrosComerciales = 0;
+            casasRegistradas[9].lugarCasa.transporte = 0;
+            casasRegistradas[9].modelo = "Departamento";
+            casasRegistradas[9].cuartos = 1;
+            casasRegistradas[9].banos = 1;
+            casasRegistradas[9].parqueaderos = "Si";
+            casasRegistradas[9].espacioVerdes = "No";
+            casasRegistradas[9].precioCasa = 87000;
+
+            //Javier
+            //casas Centro 
+            //11
+            casasRegistradas[10].lugarCasa.sector = "Centro";
+            casasRegistradas[10].lugarCasa.parques = 2;
+            casasRegistradas[10].lugarCasa.escuelas = 2;
+            casasRegistradas[10].lugarCasa.centrosComerciales = 3;
+            casasRegistradas[10].lugarCasa.transporte = 2;
+            casasRegistradas[10].modelo = "Vivienda";
+            casasRegistradas[10].cuartos = 3;
+            casasRegistradas[10].banos = 2;
+            casasRegistradas[10].parqueaderos = "Si";
+            casasRegistradas[10].espacioVerdes = "Si";
+            casasRegistradas[10].precioCasa = 60000;
+            //12
+            casasRegistradas[11].lugarCasa.sector = "Centro";
+            casasRegistradas[11].lugarCasa.parques = 4;
+            casasRegistradas[11].lugarCasa.escuelas = 2;
+            casasRegistradas[11].lugarCasa.centrosComerciales = 3;
+            casasRegistradas[11].lugarCasa.transporte = 3;
+            casasRegistradas[11].modelo = "Departamento";
+            casasRegistradas[11].cuartos = 3;
+            casasRegistradas[11].banos = 1;
+            casasRegistradas[11].parqueaderos = "No";
+            casasRegistradas[11].espacioVerdes = "No";
+            casasRegistradas[11].precioCasa = 75000;
+            //13
+            casasRegistradas[12].lugarCasa.sector = "Centro";
+            casasRegistradas[12].lugarCasa.parques = 4;
+            casasRegistradas[12].lugarCasa.escuelas = 4;
+            casasRegistradas[12].lugarCasa.centrosComerciales = 4;
+            casasRegistradas[12].lugarCasa.transporte = 3;
+            casasRegistradas[12].modelo = "Condominio";
+            casasRegistradas[12].cuartos = 3;
+            casasRegistradas[12].banos = 2;
+            casasRegistradas[12].parqueaderos = "Si";
+            casasRegistradas[12].espacioVerdes = "No";
+            casasRegistradas[12].precioCasa = 70000;
+            //14
+            casasRegistradas[13].lugarCasa.sector = "Centro";
+            casasRegistradas[13].lugarCasa.parques = 4;
+            casasRegistradas[13].lugarCasa.escuelas = 5;
+            casasRegistradas[13].lugarCasa.centrosComerciales = 4;
+            casasRegistradas[13].lugarCasa.transporte = 4;
+            casasRegistradas[13].modelo = "Condominio";
+            casasRegistradas[13].cuartos = 3;
+            casasRegistradas[13].banos = 2;
+            casasRegistradas[13].parqueaderos = "Si";
+            casasRegistradas[13].espacioVerdes = "No";
+            casasRegistradas[13].precioCasa = 62000;
+            //15
+            casasRegistradas[14].lugarCasa.sector = "Centro";
+            casasRegistradas[14].lugarCasa.parques = 4;
+            casasRegistradas[14].lugarCasa.escuelas = 4;
+            casasRegistradas[14].lugarCasa.centrosComerciales = 4;
+            casasRegistradas[14].lugarCasa.transporte = 3;
+            casasRegistradas[14].modelo = "Departamento";
+            casasRegistradas[14].cuartos = 2;
+            casasRegistradas[14].banos = 1;
+            casasRegistradas[14].parqueaderos = "Si";
+            casasRegistradas[14].espacioVerdes = "Si";
+            casasRegistradas[14].precioCasa = 50000;
+            //16
+            casasRegistradas[15].lugarCasa.sector = "Centro";
+            casasRegistradas[15].lugarCasa.parques = 4;
+            casasRegistradas[15].lugarCasa.escuelas = 4;
+            casasRegistradas[15].lugarCasa.centrosComerciales = 4;
+            casasRegistradas[15].lugarCasa.transporte = 2;
+            casasRegistradas[15].modelo = "Vivienda";
+            casasRegistradas[15].cuartos = 3;
+            casasRegistradas[15].banos = 2;
+            casasRegistradas[15].parqueaderos = "Si";
+            casasRegistradas[15].espacioVerdes = "No";
+            casasRegistradas[15].precioCasa = 52000;
+            //17
+            casasRegistradas[16].lugarCasa.sector = "Centro";
+            casasRegistradas[16].lugarCasa.parques = 4;
+            casasRegistradas[16].lugarCasa.escuelas = 4;
+            casasRegistradas[16].lugarCasa.centrosComerciales = 4;
+            casasRegistradas[16].lugarCasa.transporte = 2;
+            casasRegistradas[16].modelo = "Condominio";
+            casasRegistradas[16].cuartos = 3;
+            casasRegistradas[16].banos = 2;
+            casasRegistradas[16].parqueaderos = "No";
+            casasRegistradas[16].espacioVerdes = "No";
+            casasRegistradas[16].precioCasa = 65000;
+            //18
+            casasRegistradas[17].lugarCasa.sector = "Centro";
+            casasRegistradas[17].lugarCasa.parques = 2;
+            casasRegistradas[17].lugarCasa.escuelas = 3;
+            casasRegistradas[17].lugarCasa.centrosComerciales = 2;
+            casasRegistradas[17].lugarCasa.transporte = 3;
+            casasRegistradas[17].modelo = "Condominio";
+            casasRegistradas[17].cuartos = 3;
+            casasRegistradas[17].banos = 2;
+            casasRegistradas[17].parqueaderos = "Si";
+            casasRegistradas[17].espacioVerdes = "No";
+            casasRegistradas[17].precioCasa = 70000;
+            //19
+            casasRegistradas[18].lugarCasa.sector = "Centro";
+            casasRegistradas[18].lugarCasa.parques = 1;
+            casasRegistradas[18].lugarCasa.escuelas = 2;
+            casasRegistradas[18].lugarCasa.centrosComerciales = 4;
+            casasRegistradas[18].lugarCasa.transporte = 4;
+            casasRegistradas[18].modelo = "Condominio";
+            casasRegistradas[18].cuartos = 2;
+            casasRegistradas[18].banos = 2;
+            casasRegistradas[18].parqueaderos = "Si";
+            casasRegistradas[18].espacioVerdes = "Si";
+            casasRegistradas[18].precioCasa = 60000;
+            //20
+            casasRegistradas[19].lugarCasa.sector = "Centro";
+            casasRegistradas[19].lugarCasa.parques = 1;
+            casasRegistradas[19].lugarCasa.escuelas = 3;
+            casasRegistradas[19].lugarCasa.centrosComerciales = 1;
+            casasRegistradas[19].lugarCasa.transporte = 2;
+            casasRegistradas[19].modelo = "Condominio";
+            casasRegistradas[19].cuartos = 1;
+            casasRegistradas[19].banos = 1;
+            casasRegistradas[19].parqueaderos = "Si";
+            casasRegistradas[19].espacioVerdes = "No";
+            casasRegistradas[19].precioCasa = 55000;
+
+        }
     }
 }
