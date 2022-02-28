@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VentasDeCasaUIO
-{
-    
-    //estructuras persona
+{    //DECLARACION DE ESTRUCTURAS
+    //estructura persona
     public struct Persona
     {
         public string nombre { get; set; }
@@ -46,12 +45,14 @@ namespace VentasDeCasaUIO
     }
     public partial class Form1 : Form
     {
+        //DECLARACION DE VARIABLES DE ALCANCE GLOBAL
         int n = 30;
         bool encontrado;
         int busqueda;
         public Form1()
         {
             InitializeComponent();
+            //Para ocultar al empezar el boton de cuotas y el label de cuotas
             txtCuotas.Hide();
             lbCuotas.Hide();
         }
@@ -100,36 +101,8 @@ namespace VentasDeCasaUIO
                 }
             }
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void lblTransporte_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void rdbDepartamento_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void gboxModelo_Enter(object sender, EventArgs e)
-        {
-
-        }
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-        private void lblComprar_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnConfirmar_Click(object sender, EventArgs e)
-        {
+        {   //PARA ABRIR LA NUEVA VENTANA DE CONFIRMAR
             Agradecimiento agradecimiento = new Agradecimiento();
             agradecimiento.Show();
             this.Hide();
@@ -506,9 +479,8 @@ namespace VentasDeCasaUIO
 
             Persona persona1 = new Persona(); //constructor de una nueva persona
             Casa casaDeseada = new Casa(); //constructor de la casa deseada
-
-            // CAMBIAR LA VARIABLE DE CENTROS COMERCIALES
-            persona1.nombre = txtNombre.Text; //obtener el texto de un text box
+            //Obtencion y asginacion de variables
+            persona1.nombre = txtNombre.Text; 
             persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
             casaDeseada.cuartos = int.Parse(txtCuartos.Text);
             casaDeseada.lugarCasa.parques = int.Parse(txtParques.Text);
@@ -541,7 +513,6 @@ namespace VentasDeCasaUIO
             {
                 casaDeseada.espacioVerdes = "Si";
             }
-
             else if (rbNoE.Checked)
             {
                 casaDeseada.espacioVerdes = "No";
@@ -563,7 +534,6 @@ namespace VentasDeCasaUIO
             //llamada a la funcion busqueda
             busquedaCasa(casasRegistradas, n, casaDeseada, persona1);
         }
-
         private void rbtnCredito_CheckedChanged(object sender, EventArgs e)
         {
             //para mostar el text de cuotas cuando este señanalado cuotas

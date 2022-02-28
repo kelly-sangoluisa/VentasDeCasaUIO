@@ -52,7 +52,7 @@
             this.gboxModelo = new System.Windows.Forms.GroupBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnCompar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txaRecibo = new System.Windows.Forms.TextBox();
             this.txtCuotas = new System.Windows.Forms.TextBox();
             this.lbCuotas = new System.Windows.Forms.Label();
             this.rbCredito = new System.Windows.Forms.RadioButton();
@@ -89,10 +89,9 @@
             this.lblBienvenidos.Location = new System.Drawing.Point(161, 7);
             this.lblBienvenidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBienvenidos.Name = "lblBienvenidos";
-            this.lblBienvenidos.Size = new System.Drawing.Size(419, 93);
+            this.lblBienvenidos.Size = new System.Drawing.Size(419, 62);
             this.lblBienvenidos.TabIndex = 0;
-            this.lblBienvenidos.Text = "Bienvenidos a ventas de casas UIO,\r\n    encuentra la casa de tus sueños\r\n\r\n";
-            this.lblBienvenidos.Click += new System.EventHandler(this.label1_Click);
+            this.lblBienvenidos.Text = "Bienvenidos a ventas de casas UIO,\r\n  encuentra la casa de tus sueños";
             // 
             // lblNombre
             // 
@@ -108,7 +107,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(177, 86);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(152, 20);
             this.txtNombre.TabIndex = 2;
@@ -127,7 +126,7 @@
             // txtPresupuesto
             // 
             this.txtPresupuesto.Location = new System.Drawing.Point(177, 127);
-            this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(2);
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Size = new System.Drawing.Size(152, 20);
             this.txtPresupuesto.TabIndex = 4;
@@ -148,7 +147,7 @@
             this.rbVivienda.AutoSize = true;
             this.rbVivienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbVivienda.Location = new System.Drawing.Point(5, 7);
-            this.rbVivienda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbVivienda.Margin = new System.Windows.Forms.Padding(2);
             this.rbVivienda.Name = "rbVivienda";
             this.rbVivienda.Size = new System.Drawing.Size(66, 17);
             this.rbVivienda.TabIndex = 6;
@@ -161,7 +160,7 @@
             this.rbCondominio.AutoSize = true;
             this.rbCondominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCondominio.Location = new System.Drawing.Point(5, 29);
-            this.rbCondominio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbCondominio.Margin = new System.Windows.Forms.Padding(2);
             this.rbCondominio.Name = "rbCondominio";
             this.rbCondominio.Size = new System.Drawing.Size(80, 17);
             this.rbCondominio.TabIndex = 7;
@@ -174,14 +173,13 @@
             this.rbDepartamento.AutoSize = true;
             this.rbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDepartamento.Location = new System.Drawing.Point(5, 50);
-            this.rbDepartamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbDepartamento.Margin = new System.Windows.Forms.Padding(2);
             this.rbDepartamento.Name = "rbDepartamento";
             this.rbDepartamento.Size = new System.Drawing.Size(92, 17);
             this.rbDepartamento.TabIndex = 8;
             this.rbDepartamento.TabStop = true;
             this.rbDepartamento.Text = "Departamento";
             this.rbDepartamento.UseVisualStyleBackColor = true;
-            this.rbDepartamento.CheckedChanged += new System.EventHandler(this.rdbDepartamento_CheckedChanged);
             // 
             // lblCuartos
             // 
@@ -197,7 +195,7 @@
             // txtCuartos
             // 
             this.txtCuartos.Location = new System.Drawing.Point(501, 80);
-            this.txtCuartos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCuartos.Margin = new System.Windows.Forms.Padding(2);
             this.txtCuartos.Name = "txtCuartos";
             this.txtCuartos.Size = new System.Drawing.Size(31, 20);
             this.txtCuartos.TabIndex = 10;
@@ -216,7 +214,7 @@
             // txtParques
             // 
             this.txtParques.Location = new System.Drawing.Point(501, 123);
-            this.txtParques.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParques.Margin = new System.Windows.Forms.Padding(2);
             this.txtParques.Name = "txtParques";
             this.txtParques.Size = new System.Drawing.Size(31, 20);
             this.txtParques.TabIndex = 12;
@@ -235,7 +233,7 @@
             // txtEscuelas
             // 
             this.txtEscuelas.Location = new System.Drawing.Point(501, 163);
-            this.txtEscuelas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEscuelas.Margin = new System.Windows.Forms.Padding(2);
             this.txtEscuelas.Name = "txtEscuelas";
             this.txtEscuelas.Size = new System.Drawing.Size(31, 20);
             this.txtEscuelas.TabIndex = 14;
@@ -254,7 +252,7 @@
             // txtBanos
             // 
             this.txtBanos.Location = new System.Drawing.Point(628, 77);
-            this.txtBanos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBanos.Margin = new System.Windows.Forms.Padding(2);
             this.txtBanos.Name = "txtBanos";
             this.txtBanos.Size = new System.Drawing.Size(31, 20);
             this.txtBanos.TabIndex = 16;
@@ -273,7 +271,7 @@
             // txtCeCo
             // 
             this.txtCeCo.Location = new System.Drawing.Point(635, 123);
-            this.txtCeCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCeCo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCeCo.Name = "txtCeCo";
             this.txtCeCo.Size = new System.Drawing.Size(31, 20);
             this.txtCeCo.TabIndex = 18;
@@ -288,12 +286,11 @@
             this.lblTransporte.Size = new System.Drawing.Size(64, 13);
             this.lblTransporte.TabIndex = 19;
             this.lblTransporte.Text = "Transporte :";
-            this.lblTransporte.Click += new System.EventHandler(this.lblTransporte_Click);
             // 
             // txtTransporte
             // 
             this.txtTransporte.Location = new System.Drawing.Point(635, 168);
-            this.txtTransporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTransporte.Margin = new System.Windows.Forms.Padding(2);
             this.txtTransporte.Name = "txtTransporte";
             this.txtTransporte.Size = new System.Drawing.Size(31, 20);
             this.txtTransporte.TabIndex = 20;
@@ -308,7 +305,6 @@
             this.gboxModelo.Size = new System.Drawing.Size(105, 75);
             this.gboxModelo.TabIndex = 21;
             this.gboxModelo.TabStop = false;
-            this.gboxModelo.Enter += new System.EventHandler(this.gboxModelo_Enter);
             // 
             // btnConfirmar
             // 
@@ -329,13 +325,13 @@
             this.btnCompar.Text = "Comprar";
             this.btnCompar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txaRecibo
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 488);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(354, 80);
-            this.textBox1.TabIndex = 24;
+            this.txaRecibo.Location = new System.Drawing.Point(188, 488);
+            this.txaRecibo.Multiline = true;
+            this.txaRecibo.Name = "txaRecibo";
+            this.txaRecibo.Size = new System.Drawing.Size(354, 80);
+            this.txaRecibo.TabIndex = 24;
             // 
             // txtCuotas
             // 
@@ -379,12 +375,11 @@
             // lblComprar
             // 
             this.lblComprar.AutoSize = true;
-            this.lblComprar.Location = new System.Drawing.Point(328, 407);
+            this.lblComprar.Location = new System.Drawing.Point(262, 407);
             this.lblComprar.Name = "lblComprar";
-            this.lblComprar.Size = new System.Drawing.Size(72, 13);
+            this.lblComprar.Size = new System.Drawing.Size(220, 13);
             this.lblComprar.TabIndex = 38;
-            this.lblComprar.Text = "Comprarla en:";
-            this.lblComprar.Click += new System.EventHandler(this.lblComprar_Click);
+            this.lblComprar.Text = "Elige tu metodo de pago y da clic en comprar";
             // 
             // btnIntenteDeNuevo
             // 
@@ -539,7 +534,6 @@
             this.groupBox3.Size = new System.Drawing.Size(96, 40);
             this.groupBox3.TabIndex = 45;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // txaBusqueda
             // 
@@ -577,7 +571,7 @@
             this.Controls.Add(this.lblEspaciosVerdes);
             this.Controls.Add(this.lblParqueaderos);
             this.Controls.Add(this.lblIngresaSector);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txaRecibo);
             this.Controls.Add(this.btnCompar);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.gboxModelo);
@@ -601,7 +595,6 @@
             this.Controls.Add(this.lblBienvenidos);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.gboxModelo.ResumeLayout(false);
             this.gboxModelo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -643,7 +636,7 @@
         private System.Windows.Forms.GroupBox gboxModelo;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button btnCompar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txaRecibo;
         private System.Windows.Forms.TextBox txtCuotas;
         private System.Windows.Forms.Label lbCuotas;
         private System.Windows.Forms.RadioButton rbCredito;
