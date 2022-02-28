@@ -965,5 +965,37 @@ namespace VentasDeCasaUIO
             //FormaDePago(casasRegistradas, busqueda, persona1);
 
         }
+
+        private void btnIntenteDeNuevo_Click(object sender, EventArgs e)
+        {
+            //borrar text box:
+            txtNombre.Clear();
+            txtPresupuesto.Clear();
+            txtCuartos.Clear();
+            txtBanos.Clear();
+            txtParques.Clear();
+            txtEscuelas.Clear();
+            txtCeCo.Clear();
+            txtTransporte.Clear();
+            //borrar radio buton
+            rbVivienda.Checked = false;
+            rbCondominio.Checked = false;
+            rbDepartamento.Checked = false;
+            rbSur.Checked = false;
+            rbCentro.Checked = false;
+            rbNorte.Checked = false;
+            rbSiP.Checked = false;
+            rbNoP.Checked = false;
+            rbSiE.Checked = false;
+            rbNoE.Checked = false;
+            txaBusqueda.Clear();
+            txtCuotas.Hide();
+            lbCuotas.Hide();
+            btnConfirmar.Hide();
+            rbCredito.Enabled = false;
+            rbEfectivo.Enabled = false;
+           /// btnComprar.Enabled = false;
+            txaRecibo.Clear();
+        }
     }
 }
