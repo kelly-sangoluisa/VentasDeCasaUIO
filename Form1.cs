@@ -925,6 +925,7 @@ namespace VentasDeCasaUIO
             persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
             txaRecibo.Clear();
             //FormaDePago(casasRegistradas, busqueda, persona1);
+
         }
     }
 }
