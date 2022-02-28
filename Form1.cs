@@ -88,7 +88,7 @@ namespace VentasDeCasaUIO
                                                             encontrado = true;
                                                             if (encontrado)
                                                             {
-                                                                //mostrarCasa(casa2, p1, busqueda);
+                                                                mostrarCasa(casa2, p1, busqueda);
                                                             }
                                                         }
                                                     }
@@ -566,6 +566,11 @@ namespace VentasDeCasaUIO
             txaBusqueda.Clear();
             //llamada a la funcion busqueda
             busquedaCasa(casasRegistradas, n, casaDeseada, persona1);
+            if (txaBusqueda.Text.Length == 0)
+            {
+                txaBusqueda.Text = persona1.nombre+", Lo sentimos no contamos con una casa con esas caracteristicas, intentalo de nuevo";
+            }
+      
         }
         private void rbtnCredito_CheckedChanged(object sender, EventArgs e)
         {
