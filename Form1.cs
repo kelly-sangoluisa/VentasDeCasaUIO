@@ -57,6 +57,11 @@ namespace VentasDeCasaUIO
             //Para ocultar al empezar el boton de cuotas y el label de cuotas
             txtCuotas.Hide();
             lbCuotas.Hide();
+            //ocultamiento de btn confirmar hasta que sea valido
+            btnConfirmar.Hide();
+            rbCredito.Enabled = false;
+            rbEfectivo.Enabled = false;
+            btnComprar.Enabled = false;
         }
         public void busquedaCasa(Casa[] casa2, int tamanio, Casa casaDeseada, Persona p1)
         {
@@ -89,6 +94,9 @@ namespace VentasDeCasaUIO
                                                             if (encontrado)
                                                             {
                                                                 mostrarCasa(casa2, p1, busqueda);
+                                                                rbEfectivo.Enabled = true;
+                                                                rbCredito.Enabled = true;
+                                                                btnComprar.Enabled = true;
                                                             }
                                                         }
                                                     }
@@ -994,7 +1002,7 @@ namespace VentasDeCasaUIO
             btnConfirmar.Hide();
             rbCredito.Enabled = false;
             rbEfectivo.Enabled = false;
-           /// btnComprar.Enabled = false;
+            btnComprar.Enabled = false;
             txaRecibo.Clear();
         }
     }
