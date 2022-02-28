@@ -390,6 +390,7 @@
             this.btnIntenteDeNuevo.TabIndex = 37;
             this.btnIntenteDeNuevo.Text = "Intentelo de nuevo";
             this.btnIntenteDeNuevo.UseVisualStyleBackColor = true;
+            this.btnIntenteDeNuevo.Click += new System.EventHandler(this.btnIntenteDeNuevo_Click);
             // 
             // btnBuscar
             // 
