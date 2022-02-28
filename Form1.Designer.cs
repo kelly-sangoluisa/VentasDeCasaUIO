@@ -324,6 +324,7 @@
             this.btnCompar.TabIndex = 23;
             this.btnCompar.Text = "Comprar";
             this.btnCompar.UseVisualStyleBackColor = true;
+            this.btnCompar.Click += new System.EventHandler(this.btnCompar_Click);
             // 
             // txaRecibo
             // 
