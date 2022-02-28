@@ -919,6 +919,12 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].espacioVerdes = "Si";
             casasRegistradas[29].precioCasa = 4000;
             //FIN DE CASAS REGISTRADAS
+            Persona persona1 = new Persona(); //constructor de una nueva persona
+
+            persona1.nombre = txtNombre.Text; //obtener el texto de un text box
+            persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
+            txaRecibo.Clear();
+            //FormaDePago(casasRegistradas, busqueda, persona1);
         }
     }
 }
