@@ -49,6 +49,8 @@ namespace VentasDeCasaUIO
         int n = 30;
         bool encontrado;
         int busqueda;
+        decimal subTotal;
+        decimal Total;
         public Form1()
         {
             InitializeComponent();
@@ -99,6 +101,37 @@ namespace VentasDeCasaUIO
                         }
                     }
                 }
+            }
+        }
+        public void mostrarCasa(Casa[] casa2, Persona p1, int aux)
+        { //MOSTRAR COMENTARIO 
+            txaBusqueda.Text = p1.nombre + ", hemos encontrado la casa de tus sueños:" + "\r\n"
+            + "1  " + casa2[aux].modelo + "\r\n" +
+            "Ubicada en: " + casa2[aux].lugarCasa.sector + " de Quito" + "\r\n" +
+            "Con " + casa2[aux].cuartos + " cuartos y " + casa2[aux].banos + "  baños " + "\r\n" +
+            "Parqueadero : " + casa2[aux].parqueaderos + "       Espacios Verdes: " + casa2[aux].espacioVerdes + "\r\n"
+            + "Y esta cerca de: " + "\r\n" + casa2[aux].lugarCasa.parques + " parques, " +
+            +casa2[aux].lugarCasa.escuelas + " escuelas, y " + casa2[aux].lugarCasa.transporte +
+            " sitios de transporte " + "\r\n" + "A un precio de:   " + casa2[aux].precioCasa + "$ ";
+        }
+        public void CalcularCredito(Persona p1, int aux, Casa[] casas)
+        { 
+            Credito credito = new Credito();//Constructor de un nuevo credito 
+            credito.cuotasMaxima = 25;
+            credito.presupuestoInicial = p1.presupuesto;
+            credito.numeroCuotas = int.Parse(txtCuotas.Text);
+            if (credito.numeroCuotas <= credito.cuotasMaxima)
+            {
+                subTotal = (decimal)(casas[aux].precioCasa - credito.presupuestoInicial) * -1;
+                Total = subTotal / credito.numeroCuotas;
+                txaRecibo.Text = p1.nombre + ", tu credito se ha realizado sastifactoriamente y" + "\r\n"
+                    + "tendras que pagar " + credito.numeroCuotas + " cuotas de  " + Math.Round(Total, 2) + "$";
+            }
+            else
+            {
+                txaRecibo.Text = "Lo sentimos, " + p1.nombre + ", tu credito no se ha realizado sastifactoriamente ya que" + "\r\n"
+                    + "ya que nuestro sistema solo acepta maximo " + credito.cuotasMaxima + " cuotas "
+                    + "\r\n" + "   Intentalo de nuevo.";
             }
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
