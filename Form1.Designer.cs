@@ -617,7 +617,6 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblBienvenidos);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.gboxModelo.ResumeLayout(false);
             this.gboxModelo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
