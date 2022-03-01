@@ -575,6 +575,7 @@
             this.linkLbManual.TabIndex = 48;
             this.linkLbManual.TabStop = true;
             this.linkLbManual.Text = "Manual De Usuario ";
+            this.linkLbManual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLbManual_LinkClicked);
             // 
             // VentasDeCasasUIO
             // 
