@@ -142,6 +142,18 @@ namespace VentasDeCasaUIO
                     + "\r\n" + "   Intentalo de nuevo.";
             }
         }
+        public void FormaDePago(Casa[] casas, int aux, Persona p1)
+        {
+            if (rbEfectivo.Checked)
+            {
+                txaRecibo.Text = " El total a pagar sera de " + casas[aux].precioCasa;
+            }
+            else if (rbCredito.Checked)
+            {
+                CalcularCredito(p1, aux, casas);
+            }
+            btnConfirmar.Show();
+        }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {   //PARA ABRIR LA NUEVA VENTANA DE CONFIRMAR
             Agradecimiento agradecimiento = new Agradecimiento();
@@ -970,7 +982,8 @@ namespace VentasDeCasaUIO
             persona1.nombre = txtNombre.Text; //obtener el texto de un text box
             persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
             txaRecibo.Clear();
-            //FormaDePago(casasRegistradas, busqueda, persona1);
+            //llamada a la clase forma de pago
+            FormaDePago(casasRegistradas, busqueda, persona1);
 
         }
 
