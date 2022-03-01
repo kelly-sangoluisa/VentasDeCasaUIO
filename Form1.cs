@@ -43,7 +43,7 @@ namespace VentasDeCasaUIO
         public int numeroCuotas;
         public int cuotasMaxima;
     }
-    public partial class Form1 : Form
+    public partial class VentasDeCasasUIO : Form
     {
         //DECLARACION DE VARIABLES DE ALCANCE GLOBAL
         int n = 30;
@@ -51,7 +51,7 @@ namespace VentasDeCasaUIO
         int busqueda;
         double subTotal;
         double Total;
-        public Form1()
+        public VentasDeCasasUIO()
         {
             InitializeComponent();
             //Para al empezar ocultar el boton de cuotas y el label de cuotas

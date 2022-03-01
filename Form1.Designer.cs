@@ -1,6 +1,6 @@
 ﻿namespace VentasDeCasaUIO
 {
-    partial class Form1
+    partial class VentasDeCasasUIO
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentasDeCasasUIO));
             this.lblBienvenidos = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -575,7 +576,7 @@
             this.linkLbManual.TabStop = true;
             this.linkLbManual.Text = "Manual De Usuario ";
             // 
-            // Form1
+            // VentasDeCasasUIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -616,7 +617,8 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblBienvenidos);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "VentasDeCasasUIO";
             this.gboxModelo.ResumeLayout(false);
             this.gboxModelo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
