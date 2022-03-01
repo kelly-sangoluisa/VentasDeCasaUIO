@@ -111,6 +111,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(152, 20);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblPresupuesto
             // 
@@ -130,6 +131,7 @@
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Size = new System.Drawing.Size(152, 20);
             this.txtPresupuesto.TabIndex = 4;
+            this.txtPresupuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPresupuesto_KeyPress);
             // 
             // lblModelo
             // 
@@ -199,6 +201,7 @@
             this.txtCuartos.Name = "txtCuartos";
             this.txtCuartos.Size = new System.Drawing.Size(31, 20);
             this.txtCuartos.TabIndex = 10;
+            this.txtCuartos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuartos_KeyPress);
             // 
             // lblParques
             // 
@@ -218,6 +221,7 @@
             this.txtParques.Name = "txtParques";
             this.txtParques.Size = new System.Drawing.Size(31, 20);
             this.txtParques.TabIndex = 12;
+            this.txtParques.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParques_KeyPress);
             // 
             // lblEscuelas
             // 
@@ -237,6 +241,7 @@
             this.txtEscuelas.Name = "txtEscuelas";
             this.txtEscuelas.Size = new System.Drawing.Size(31, 20);
             this.txtEscuelas.TabIndex = 14;
+            this.txtEscuelas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEscuelas_KeyPress);
             // 
             // lblBaños
             // 
@@ -256,6 +261,7 @@
             this.txtBanos.Name = "txtBanos";
             this.txtBanos.Size = new System.Drawing.Size(31, 20);
             this.txtBanos.TabIndex = 16;
+            this.txtBanos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBanos_KeyPress);
             // 
             // label1
             // 
@@ -275,6 +281,7 @@
             this.txtCeCo.Name = "txtCeCo";
             this.txtCeCo.Size = new System.Drawing.Size(31, 20);
             this.txtCeCo.TabIndex = 18;
+            this.txtCeCo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCeCo_KeyPress);
             // 
             // lblTransporte
             // 
@@ -294,6 +301,7 @@
             this.txtTransporte.Name = "txtTransporte";
             this.txtTransporte.Size = new System.Drawing.Size(31, 20);
             this.txtTransporte.TabIndex = 20;
+            this.txtTransporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTransporte_KeyPress);
             // 
             // gboxModelo
             // 
@@ -340,6 +348,7 @@
             this.txtCuotas.Name = "txtCuotas";
             this.txtCuotas.Size = new System.Drawing.Size(33, 20);
             this.txtCuotas.TabIndex = 42;
+            this.txtCuotas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuotas_KeyPress);
             // 
             // lbCuotas
             // 
