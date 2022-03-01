@@ -420,7 +420,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[20].banos = 1;
             casasRegistradas[20].parqueaderos = "Si";
             casasRegistradas[20].espacioVerdes = "No";
-            casasRegistradas[20].precioCasa = 8000;
+            casasRegistradas[20].precioCasa = 98000;
             //22
             casasRegistradas[21].lugarCasa.sector = "Sur";
             casasRegistradas[21].lugarCasa.parques = 1;
@@ -432,7 +432,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[21].banos = 2;
             casasRegistradas[21].parqueaderos = "No";
             casasRegistradas[21].espacioVerdes = "Si";
-            casasRegistradas[21].precioCasa = 4000;
+            casasRegistradas[21].precioCasa = 44000;
             //23
             casasRegistradas[22].lugarCasa.sector = "Sur";
             casasRegistradas[22].lugarCasa.parques = 3;
@@ -444,7 +444,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[22].banos = 3;
             casasRegistradas[22].parqueaderos = "Si";
             casasRegistradas[22].espacioVerdes = "Si";
-            casasRegistradas[22].precioCasa = 6000;
+            casasRegistradas[22].precioCasa = 86000;
             //24
             casasRegistradas[23].lugarCasa.sector = "Sur";
             casasRegistradas[23].lugarCasa.parques = 2;
@@ -456,7 +456,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[23].banos = 1;
             casasRegistradas[23].parqueaderos = "No";
             casasRegistradas[23].espacioVerdes = "No";
-            casasRegistradas[23].precioCasa = 9000;
+            casasRegistradas[23].precioCasa = 89000;
             //25
             casasRegistradas[24].lugarCasa.sector = "Sur";
             casasRegistradas[24].lugarCasa.parques = 3;
@@ -468,7 +468,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[24].banos = 2;
             casasRegistradas[24].parqueaderos = "Si";
             casasRegistradas[24].espacioVerdes = "No";
-            casasRegistradas[24].precioCasa = 5000;
+            casasRegistradas[24].precioCasa = 55000;
             //26
             casasRegistradas[25].lugarCasa.sector = "Sur";
             casasRegistradas[25].lugarCasa.parques = 1;
@@ -480,7 +480,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[25].banos = 2;
             casasRegistradas[25].parqueaderos = "No";
             casasRegistradas[25].espacioVerdes = "Si";
-            casasRegistradas[25].precioCasa = 6000;
+            casasRegistradas[25].precioCasa = 46000;
             //27
             casasRegistradas[26].lugarCasa.sector = "Sur";
             casasRegistradas[26].lugarCasa.parques = 1;
@@ -492,7 +492,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[26].banos = 1;
             casasRegistradas[26].parqueaderos = "No";
             casasRegistradas[26].espacioVerdes = "No";
-            casasRegistradas[26].precioCasa = 5000;
+            casasRegistradas[26].precioCasa = 85000;
             //28
             casasRegistradas[27].lugarCasa.sector = "Sur";
             casasRegistradas[27].lugarCasa.parques = 1;
@@ -504,7 +504,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[27].banos = 2;
             casasRegistradas[27].parqueaderos = "Si";
             casasRegistradas[27].espacioVerdes = "No";
-            casasRegistradas[27].precioCasa = 3000;
+            casasRegistradas[27].precioCasa = 43000;
             //29
             casasRegistradas[28].lugarCasa.sector = "Sur";
             casasRegistradas[28].lugarCasa.parques = 3;
@@ -516,7 +516,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[28].banos = 2;
             casasRegistradas[28].parqueaderos = "No";
             casasRegistradas[28].espacioVerdes = "No";
-            casasRegistradas[28].precioCasa = 10000;
+            casasRegistradas[28].precioCasa = 90000;
             //30
             casasRegistradas[29].lugarCasa.sector = "Sur";
             casasRegistradas[29].lugarCasa.parques = 2;
@@ -528,7 +528,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].banos = 3;
             casasRegistradas[29].parqueaderos = "Si";
             casasRegistradas[29].espacioVerdes = "Si";
-            casasRegistradas[29].precioCasa = 4000;
+            casasRegistradas[29].precioCasa = 54000;
             //FIN DE CASAS REGISTRADAS
 
             Persona persona1 = new Persona(); //constructor de una nueva persona
@@ -868,7 +868,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[20].banos = 1;
             casasRegistradas[20].parqueaderos = "Si";
             casasRegistradas[20].espacioVerdes = "No";
-            casasRegistradas[20].precioCasa = 8000;
+            casasRegistradas[20].precioCasa = 98000;
             //22
             casasRegistradas[21].lugarCasa.sector = "Sur";
             casasRegistradas[21].lugarCasa.parques = 1;
@@ -880,7 +880,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[21].banos = 2;
             casasRegistradas[21].parqueaderos = "No";
             casasRegistradas[21].espacioVerdes = "Si";
-            casasRegistradas[21].precioCasa = 4000;
+            casasRegistradas[21].precioCasa = 44000;
             //23
             casasRegistradas[22].lugarCasa.sector = "Sur";
             casasRegistradas[22].lugarCasa.parques = 3;
@@ -892,7 +892,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[22].banos = 3;
             casasRegistradas[22].parqueaderos = "Si";
             casasRegistradas[22].espacioVerdes = "Si";
-            casasRegistradas[22].precioCasa = 6000;
+            casasRegistradas[22].precioCasa = 86000;
             //24
             casasRegistradas[23].lugarCasa.sector = "Sur";
             casasRegistradas[23].lugarCasa.parques = 2;
@@ -904,7 +904,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[23].banos = 1;
             casasRegistradas[23].parqueaderos = "No";
             casasRegistradas[23].espacioVerdes = "No";
-            casasRegistradas[23].precioCasa = 9000;
+            casasRegistradas[23].precioCasa = 89000;
             //25
             casasRegistradas[24].lugarCasa.sector = "Sur";
             casasRegistradas[24].lugarCasa.parques = 3;
@@ -916,7 +916,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[24].banos = 2;
             casasRegistradas[24].parqueaderos = "Si";
             casasRegistradas[24].espacioVerdes = "No";
-            casasRegistradas[24].precioCasa = 5000;
+            casasRegistradas[24].precioCasa = 55000;
             //26
             casasRegistradas[25].lugarCasa.sector = "Sur";
             casasRegistradas[25].lugarCasa.parques = 1;
@@ -928,7 +928,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[25].banos = 2;
             casasRegistradas[25].parqueaderos = "No";
             casasRegistradas[25].espacioVerdes = "Si";
-            casasRegistradas[25].precioCasa = 6000;
+            casasRegistradas[25].precioCasa = 46000;
             //27
             casasRegistradas[26].lugarCasa.sector = "Sur";
             casasRegistradas[26].lugarCasa.parques = 1;
@@ -940,7 +940,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[26].banos = 1;
             casasRegistradas[26].parqueaderos = "No";
             casasRegistradas[26].espacioVerdes = "No";
-            casasRegistradas[26].precioCasa = 5000;
+            casasRegistradas[26].precioCasa = 85000;
             //28
             casasRegistradas[27].lugarCasa.sector = "Sur";
             casasRegistradas[27].lugarCasa.parques = 1;
@@ -952,7 +952,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[27].banos = 2;
             casasRegistradas[27].parqueaderos = "Si";
             casasRegistradas[27].espacioVerdes = "No";
-            casasRegistradas[27].precioCasa = 3000;
+            casasRegistradas[27].precioCasa = 43000;
             //29
             casasRegistradas[28].lugarCasa.sector = "Sur";
             casasRegistradas[28].lugarCasa.parques = 3;
@@ -964,7 +964,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[28].banos = 2;
             casasRegistradas[28].parqueaderos = "No";
             casasRegistradas[28].espacioVerdes = "No";
-            casasRegistradas[28].precioCasa = 10000;
+            casasRegistradas[28].precioCasa = 90000;
             //30
             casasRegistradas[29].lugarCasa.sector = "Sur";
             casasRegistradas[29].lugarCasa.parques = 2;
@@ -976,7 +976,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].banos = 3;
             casasRegistradas[29].parqueaderos = "Si";
             casasRegistradas[29].espacioVerdes = "Si";
-            casasRegistradas[29].precioCasa = 4000;
+            casasRegistradas[29].precioCasa = 54000;
             //FIN DE CASAS REGISTRADAS
             Persona persona1 = new Persona(); //constructor de una nueva persona
 
