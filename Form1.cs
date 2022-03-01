@@ -49,21 +49,23 @@ namespace VentasDeCasaUIO
         int n = 30;
         bool encontrado;
         int busqueda;
-        decimal subTotal;
-        decimal Total;
+        double subTotal;
+        double Total;
         public Form1()
         {
             InitializeComponent();
             //Para ocultar al empezar el boton de cuotas y el label de cuotas
             txtCuotas.Hide();
             lbCuotas.Hide();
-            //ocultamiento de btn confirmar hasta que sea valido
+            //ocultamiento de btn confirmar hasta que cumpla con especificaciones como la busqueda
             btnConfirmar.Hide();
             rbCredito.Enabled = false;
             rbEfectivo.Enabled = false;
             btnComprar.Enabled = false;
         }
+        //llamada a la clase validadora de numeros y letras para su uso 
         ValidadorDeNumerosLetras validar = new ValidadorDeNumerosLetras(); //constructor del validor
+       //clase para buscar la casa deseada en base a las casas registradas
         public void busquedaCasa(Casa[] casa2, int tamanio, Casa casaDeseada, Persona p1)
         {
             for (int i = 0; i < tamanio; i++)
@@ -88,12 +90,12 @@ namespace VentasDeCasaUIO
                                                 {
                                                     if (casa2[i].espacioVerdes.Equals(casaDeseada.espacioVerdes))
                                                     {
-                                                        if (casa2[i].precioCasa <= p1.presupuesto)
+                                                        if (casa2[i].precioCasa <= p1.presupuesto || casa2[i].precioCasa >= p1.presupuesto)
                                                         {
                                                             busqueda = i;
                                                             encontrado = true;
                                                             if (encontrado)
-                                                            {
+                                                            { //mostrar casa y habilitar los botones y radio de comprar
                                                                 mostrarCasa(casa2, p1, busqueda);
                                                                 rbEfectivo.Enabled = true;
                                                                 rbCredito.Enabled = true;
@@ -112,6 +114,7 @@ namespace VentasDeCasaUIO
                 }
             }
         }
+        //clase para mostrar la casa encontrada si la busqueda es exitosa
         public void mostrarCasa(Casa[] casa2, Persona p1, int aux)
         { //MOSTRAR COMENTARIO 
             txaBusqueda.Text = p1.nombre + ", hemos encontrado la casa de tus sueños:" + "\r\n"
@@ -123,6 +126,7 @@ namespace VentasDeCasaUIO
             +casa2[aux].lugarCasa.escuelas + " escuelas, y " + casa2[aux].lugarCasa.transporte +
             " sitios de transporte " + "\r\n" + "A un precio de:   " + casa2[aux].precioCasa + "$ ";
         }
+        //clase para calcular el credito 
         public void CalcularCredito(Persona p1, int aux, Casa[] casas)
         { 
             Credito credito = new Credito();//Constructor de un nuevo credito 
@@ -131,10 +135,23 @@ namespace VentasDeCasaUIO
             credito.numeroCuotas = int.Parse(txtCuotas.Text);
             if (credito.numeroCuotas <= credito.cuotasMaxima)
             {
-                subTotal = (decimal)(casas[aux].precioCasa - credito.presupuestoInicial) * -1;
-                Total = subTotal / credito.numeroCuotas;
-                txaRecibo.Text = p1.nombre + ", tu credito se ha realizado sastifactoriamente y" + "\r\n"
-                    + "tendras que pagar " + credito.numeroCuotas + " cuotas de  " + Math.Round(Total, 2) + "$";
+                if (credito.presupuestoInicial >= casas[aux].precioCasa)
+                {
+                    subTotal = (casas[aux].precioCasa / credito.numeroCuotas);
+                    Total = subTotal;
+                    txaRecibo.Text = p1.nombre + ", tu credito se ha realizado sastifactoriamente y" + "\r\n"
+                        + "tendras que pagar " + credito.numeroCuotas + " cuotas de  " + Math.Round(Total, 2) + "$";
+                }
+                else
+                {
+                    if (credito.presupuestoInicial < casas[aux].precioCasa)
+                    {
+                        subTotal = casas[aux].precioCasa - credito.presupuestoInicial;
+                        Total = subTotal / credito.numeroCuotas;
+                        txaRecibo.Text = p1.nombre + ", tu credito se ha realizado sastifactoriamente y" + "\r\n"
+                            + "tendras que pagar una cuota inicial de " + credito.presupuestoInicial + "$ y " + credito.numeroCuotas + " cuotas de  " + Math.Round(Total, 2) + "$";
+                    }
+                }
             }
             else
             {
@@ -143,6 +160,7 @@ namespace VentasDeCasaUIO
                     + "\r\n" + "   Intentalo de nuevo.";
             }
         }
+        //clase para la eleccion de forma de pago 
         public void FormaDePago(Casa[] casas, int aux, Persona p1)
         {
             if (rbEfectivo.Checked)
@@ -155,12 +173,14 @@ namespace VentasDeCasaUIO
             }
             btnConfirmar.Show();
         }
+        //instrucciones para el boton confirmar 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {   //PARA ABRIR LA NUEVA VENTANA DE CONFIRMAR
             Agradecimiento agradecimiento = new Agradecimiento();
             agradecimiento.Show();
             this.Hide();
         }
+        //instrucciones para el boton buscar
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //COMIENZO DE RESGRITRO DE CASAS 
@@ -587,6 +607,7 @@ namespace VentasDeCasaUIO
             txaBusqueda.Clear();
             //llamada a la funcion busqueda
             busquedaCasa(casasRegistradas, n, casaDeseada, persona1);
+            //instruccion por si la busqueda no fue exitosa
             if (txaBusqueda.Text.Length == 0)
             {
                 txaBusqueda.Text = persona1.nombre+", Lo sentimos no contamos con una casa con esas caracteristicas, intentalo de nuevo";
@@ -607,7 +628,7 @@ namespace VentasDeCasaUIO
                 lbCuotas.Hide();
             }
         }
-
+        //instrucciones para el boton comprar
         private void btnCompar_Click(object sender, EventArgs e)
         {
             //COMIENZO DE RESGRITRO DE CASAS 
@@ -979,7 +1000,6 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].precioCasa = 4000;
             //FIN DE CASAS REGISTRADAS
             Persona persona1 = new Persona(); //constructor de una nueva persona
-
             persona1.nombre = txtNombre.Text; //obtener el texto de un text box
             persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
             txaRecibo.Clear();
@@ -987,7 +1007,7 @@ namespace VentasDeCasaUIO
             FormaDePago(casasRegistradas, busqueda, persona1);
 
         }
-
+        //instrucciones para el boton intentelo de nuevo
         private void btnIntenteDeNuevo_Click(object sender, EventArgs e)
         {
             //borrar text box:
@@ -1019,7 +1039,7 @@ namespace VentasDeCasaUIO
             btnComprar.Enabled = false;
             txaRecibo.Clear();
         }
-
+        //inicio de las validaciones respectivas para todas las texts boxs 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             validar.ValidarLetras(e);
