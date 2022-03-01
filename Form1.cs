@@ -550,67 +550,88 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].espacioVerdes = "Si";
             casasRegistradas[29].precioCasa = 54000;
             //FIN DE CASAS REGISTRADAS
+            try
+            {
+                Persona persona1 = new Persona(); //creamos el objeto de una nueva persona
+                Casa casaDeseada = new Casa(); //creamos el objeto de la casa deseada
+                //Obtencion y asginacion de variables
+                if (txtNombre.Text.Length != 0)
+                {
+                    persona1.nombre = txtNombre.Text;
+                    persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
+                    casaDeseada.cuartos = int.Parse(txtCuartos.Text);
+                    casaDeseada.lugarCasa.parques = int.Parse(txtParques.Text);
+                    casaDeseada.lugarCasa.escuelas = int.Parse(txtEscuelas.Text);
+                    casaDeseada.banos = int.Parse(txtBanos.Text);
+                    casaDeseada.lugarCasa.centrosComerciales = int.Parse(txtCeCo.Text);
+                    casaDeseada.lugarCasa.transporte = int.Parse(txtTransporte.Text);
+                    //ASIGNACION DE RADIO BUTTONS
+                    if ((rbCentro.Checked || rbSur.Checked || rbNorte.Checked) && (rbSiP.Checked || rbNoP.Checked) && (rbSiE.Checked || rbNoE.Checked) && (rbVivienda.Checked || rbCondominio.Checked || rbDepartamento.Checked))
+                    {
+                        if (rbCentro.Checked)
+                        {
+                            casaDeseada.lugarCasa.sector = "Centro";
+                        }
+                        else if (rbSur.Checked)
+                        {
+                            casaDeseada.lugarCasa.sector = "Sur";
+                        }
+                        else if (rbNorte.Checked)
+                        {
+                            casaDeseada.lugarCasa.sector = "Norte";
+                        }
+                        if (rbSiP.Checked)
+                        {
+                            casaDeseada.parqueaderos = "Si";
+                        }
+                        else if (rbNoP.Checked)
+                        {
+                            casaDeseada.parqueaderos = "No";
+                        }
+                        if (rbSiE.Checked)
+                        {
+                            casaDeseada.espacioVerdes = "Si";
+                        }
+                        else if (rbNoE.Checked)
+                        {
+                            casaDeseada.espacioVerdes = "No";
 
-            Persona persona1 = new Persona(); //constructor de una nueva persona
-            Casa casaDeseada = new Casa(); //constructor de la casa deseada
-            //Obtencion y asginacion de variables
-            persona1.nombre = txtNombre.Text; 
-            persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
-            casaDeseada.cuartos = int.Parse(txtCuartos.Text);
-            casaDeseada.lugarCasa.parques = int.Parse(txtParques.Text);
-            casaDeseada.lugarCasa.escuelas = int.Parse(txtEscuelas.Text);
-            casaDeseada.banos = int.Parse(txtBanos.Text);
-            casaDeseada.lugarCasa.centrosComerciales = int.Parse(txtCeCo.Text);
-            casaDeseada.lugarCasa.transporte = int.Parse(txtTransporte.Text);
-            //ASIGNACION DE RADIO BUTTONS
-            if (rbCentro.Checked)
-            {
-                casaDeseada.lugarCasa.sector = "Centro";
+                        }
+                        if (rbVivienda.Checked)
+                        {
+                            casaDeseada.modelo = "Vivienda";
+                        }
+                        else if (rbCondominio.Checked)
+                        {
+                            casaDeseada.modelo = "Condominio";
+                        }
+                        else if (rbDepartamento.Checked)
+                        {
+                            casaDeseada.modelo = "Departamento";
+                        }
+                        txaBusqueda.Clear();
+                        //llamada a la funcion busqueda
+                        busquedaCasa(casasRegistradas, n, casaDeseada, persona1);
+                        //instruccion por si la busqueda no fue exitosa
+                        if (txaBusqueda.Text.Length == 0)
+                        {
+                            txaBusqueda.Text = persona1.nombre + ", Lo sentimos no contamos con una casa con esas caracteristicas, intentalo de nuevo";
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else if (rbSur.Checked)
+            catch (Exception)
             {
-                casaDeseada.lugarCasa.sector = "Sur";
-            }
-            else if (rbNorte.Checked)
-            {
-                casaDeseada.lugarCasa.sector = "Norte";
-            }
-            if (rbSiP.Checked)
-            {
-                casaDeseada.parqueaderos = "Si";
-            }
-            else if (rbNoP.Checked)
-            {
-                casaDeseada.parqueaderos = "No";
-            }
-            if (rbSiE.Checked)
-            {
-                casaDeseada.espacioVerdes = "Si";
-            }
-            else if (rbNoE.Checked)
-            {
-                casaDeseada.espacioVerdes = "No";
 
-            }
-            if (rbVivienda.Checked)
-            {
-                casaDeseada.modelo = "Vivienda";
-            }
-            else if (rbCondominio.Checked)
-            {
-                casaDeseada.modelo = "Condominio";
-            }
-            else if (rbDepartamento.Checked)
-            {
-                casaDeseada.modelo = "Departamento";
-            }
-            txaBusqueda.Clear();
-            //llamada a la funcion busqueda
-            busquedaCasa(casasRegistradas, n, casaDeseada, persona1);
-            //instruccion por si la busqueda no fue exitosa
-            if (txaBusqueda.Text.Length == 0)
-            {
-                txaBusqueda.Text = persona1.nombre+", Lo sentimos no contamos con una casa con esas caracteristicas, intentalo de nuevo";
+                MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
       
         }
@@ -999,12 +1020,19 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].espacioVerdes = "Si";
             casasRegistradas[29].precioCasa = 54000;
             //FIN DE CASAS REGISTRADAS
-            Persona persona1 = new Persona(); //constructor de una nueva persona
-            persona1.nombre = txtNombre.Text; //obtener el texto de un text box
-            persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
-            txaRecibo.Clear();
-            //llamada a la clase forma de pago
-            FormaDePago(casasRegistradas, busqueda, persona1);
+            try
+            {
+                Persona persona1 = new Persona(); //constructor de una nueva persona
+                persona1.nombre = txtNombre.Text; //obtener el texto de un text box
+                persona1.presupuesto = Convert.ToDouble(txtPresupuesto.Text, System.Globalization.CultureInfo.GetCultureInfo("es-ES")); //para convertir a double
+                txaRecibo.Clear();
+                //llamada a la clase forma de pago
+                FormaDePago(casasRegistradas, busqueda, persona1);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
         //instrucciones para el boton intentelo de nuevo
