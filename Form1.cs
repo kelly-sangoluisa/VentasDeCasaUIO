@@ -63,6 +63,7 @@ namespace VentasDeCasaUIO
             rbEfectivo.Enabled = false;
             btnComprar.Enabled = false;
         }
+        ValidadorDeNumerosLetras validar = new ValidadorDeNumerosLetras(); //constructor del validor
         public void busquedaCasa(Casa[] casa2, int tamanio, Casa casaDeseada, Persona p1)
         {
             for (int i = 0; i < tamanio; i++)

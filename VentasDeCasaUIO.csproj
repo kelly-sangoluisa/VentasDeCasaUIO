@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidadorDeNumerosLetras.cs" />
     <EmbeddedResource Include="Agradecimiento.resx">
       <DependentUpon>Agradecimiento.cs</DependentUpon>
     </EmbeddedResource>
