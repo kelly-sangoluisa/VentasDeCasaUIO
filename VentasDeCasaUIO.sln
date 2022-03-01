@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentasDeCasaUIO", "VentasDeCasaUIO.csproj", "{77779ADD-17C5-4D1D-93BF-C06EC364B38F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorVentasdeCasasUIO", "..\InstaladorVentasdeCasasUIO\InstaladorVentasdeCasasUIO.vdproj", "{D77FD032-ED87-44E7-90A6-BCAFBFB3C2B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{77779ADD-17C5-4D1D-93BF-C06EC364B38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77779ADD-17C5-4D1D-93BF-C06EC364B38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77779ADD-17C5-4D1D-93BF-C06EC364B38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77FD032-ED87-44E7-90A6-BCAFBFB3C2B2}.Debug|Any CPU.ActiveCfg = Debug
+		{D77FD032-ED87-44E7-90A6-BCAFBFB3C2B2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
