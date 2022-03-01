@@ -1019,5 +1019,50 @@ namespace VentasDeCasaUIO
             btnComprar.Enabled = false;
             txaRecibo.Clear();
         }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarLetras(e);
+        }
+
+        private void txtPresupuesto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
+
+        private void txtCuartos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
+
+        private void txtParques_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
+
+        private void txtEscuelas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
+
+        private void txtBanos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
+
+        private void txtCeCo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
+
+        private void txtTransporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
+
+        private void txtCuotas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumeros(e);
+        }
     }
 }
