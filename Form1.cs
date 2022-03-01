@@ -54,7 +54,7 @@ namespace VentasDeCasaUIO
         public Form1()
         {
             InitializeComponent();
-            //Para ocultar al empezar el boton de cuotas y el label de cuotas
+            //Para al empezar ocultar el boton de cuotas y el label de cuotas
             txtCuotas.Hide();
             lbCuotas.Hide();
             //ocultamiento de btn confirmar hasta que cumpla con especificaciones como la busqueda
@@ -64,8 +64,8 @@ namespace VentasDeCasaUIO
             btnComprar.Enabled = false;
         }
         //llamada a la clase validadora de numeros y letras para su uso 
-        ValidadorDeNumerosLetras validar = new ValidadorDeNumerosLetras(); //constructor del validor
-       //clase para buscar la casa deseada en base a las casas registradas
+        ValidadorDeNumerosLetras validar = new ValidadorDeNumerosLetras(); //constructor del objeto validor
+      //clase para buscar la casa deseada en base a las casas registradas
         public void busquedaCasa(Casa[] casa2, int tamanio, Casa casaDeseada, Persona p1)
         {
             for (int i = 0; i < tamanio; i++)
@@ -128,7 +128,7 @@ namespace VentasDeCasaUIO
         }
         //clase para calcular el credito 
         public void CalcularCredito(Persona p1, int aux, Casa[] casas)
-        { 
+        {
             Credito credito = new Credito();//Constructor de un nuevo credito 
             credito.cuotasMaxima = 25;
             credito.presupuestoInicial = p1.presupuesto;
@@ -155,9 +155,9 @@ namespace VentasDeCasaUIO
             }
             else
             {
-                txaRecibo.Text = "Lo sentimos, " + p1.nombre + ", tu credito no se ha realizado sastifactoriamente ya que" + "\r\n"
-                    + "ya que nuestro sistema solo acepta maximo " + credito.cuotasMaxima + " cuotas "
-                    + "\r\n" + "   Intentalo de nuevo.";
+                txaRecibo.Text = "Lo sentimos, " + p1.nombre + ", tu credito no se ha realizado sastifactoriamente ya "
+                    + "que nuestro sistema solo acepta un maximo de " + credito.cuotasMaxima + " cuotas "
+                    + "\r\n" + "   INTENTELO DE NUEVO ";
             }
         }
         //clase para la eleccion de forma de pago 
@@ -165,13 +165,13 @@ namespace VentasDeCasaUIO
         {
             if (rbEfectivo.Checked)
             {
-                txaRecibo.Text = " El total a pagar sera de " + casas[aux].precioCasa;
+                txaRecibo.Text = "Nombre: " + p1.nombre + "\r\n" + "Total a pagar: " + casas[aux].precioCasa;
             }
             else if (rbCredito.Checked)
             {
                 CalcularCredito(p1, aux, casas);
             }
-            btnConfirmar.Show();
+            btnConfirmar.Show(); ////mostrando el boton confirmar 
         }
         //instrucciones para el boton confirmar 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -196,7 +196,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[0].banos = 2;
             casasRegistradas[0].parqueaderos = "Si";
             casasRegistradas[0].espacioVerdes = "No";
-            casasRegistradas[0].precioCasa = 490000;
+            casasRegistradas[0].precioCasa = 70000;
             //2
             casasRegistradas[1].lugarCasa.sector = "Norte";
             casasRegistradas[1].lugarCasa.parques = 1;
@@ -208,7 +208,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[1].banos = 1;
             casasRegistradas[1].parqueaderos = "No";
             casasRegistradas[1].espacioVerdes = "No";
-            casasRegistradas[1].precioCasa = 25000;
+            casasRegistradas[1].precioCasa = 45000;
             //3
             casasRegistradas[2].lugarCasa.sector = "Norte";
             casasRegistradas[2].lugarCasa.parques = 2;
@@ -220,7 +220,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[2].banos = 2;
             casasRegistradas[2].parqueaderos = "Si";
             casasRegistradas[2].espacioVerdes = "Si";
-            casasRegistradas[2].precioCasa = 400000;
+            casasRegistradas[2].precioCasa = 75000;
             //4
             casasRegistradas[3].lugarCasa.sector = "Norte";
             casasRegistradas[3].lugarCasa.parques = 0;
@@ -232,7 +232,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[3].banos = 2;
             casasRegistradas[3].parqueaderos = "No";
             casasRegistradas[3].espacioVerdes = "No";
-            casasRegistradas[3].precioCasa = 25000;
+            casasRegistradas[3].precioCasa = 60000;
             //5
             casasRegistradas[4].lugarCasa.sector = "Norte";
             casasRegistradas[4].lugarCasa.parques = 1;
@@ -256,11 +256,11 @@ namespace VentasDeCasaUIO
             casasRegistradas[5].banos = 2;
             casasRegistradas[5].parqueaderos = "No";
             casasRegistradas[5].espacioVerdes = "Si";
-            casasRegistradas[5].precioCasa = 50000;
+            casasRegistradas[5].precioCasa = 40000;
             //7
             casasRegistradas[6].lugarCasa.sector = "Norte";
             casasRegistradas[6].lugarCasa.parques = 0;
-            casasRegistradas[6].lugarCasa.escuelas = 0;
+            casasRegistradas[6].lugarCasa.escuelas = 1;
             casasRegistradas[6].lugarCasa.centrosComerciales = 1;
             casasRegistradas[6].lugarCasa.transporte = 2;
             casasRegistradas[6].modelo = "Departamento";
@@ -268,7 +268,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[6].banos = 1;
             casasRegistradas[6].parqueaderos = "No";
             casasRegistradas[6].espacioVerdes = "No";
-            casasRegistradas[6].precioCasa = 955000;
+            casasRegistradas[6].precioCasa = 80000;
             //8
             casasRegistradas[7].lugarCasa.sector = "Norte";
             casasRegistradas[7].lugarCasa.parques = 1;
@@ -280,7 +280,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[7].banos = 2;
             casasRegistradas[7].parqueaderos = "Si";
             casasRegistradas[7].espacioVerdes = "Si";
-            casasRegistradas[7].precioCasa = 500000;
+            casasRegistradas[7].precioCasa = 90000;
             //9
             casasRegistradas[8].lugarCasa.sector = "Norte";
             casasRegistradas[8].lugarCasa.parques = 2;
@@ -292,20 +292,19 @@ namespace VentasDeCasaUIO
             casasRegistradas[8].banos = 3;
             casasRegistradas[8].parqueaderos = "No";
             casasRegistradas[8].espacioVerdes = "Si";
-            casasRegistradas[8].precioCasa = 450000;
+            casasRegistradas[8].precioCasa = 70000;
             //10
             casasRegistradas[9].lugarCasa.sector = "Norte";
             casasRegistradas[9].lugarCasa.parques = 0;
             casasRegistradas[9].lugarCasa.escuelas = 0;
             casasRegistradas[9].lugarCasa.centrosComerciales = 0;
-            casasRegistradas[9].lugarCasa.transporte = 0;
+            casasRegistradas[9].lugarCasa.transporte = 1;
             casasRegistradas[9].modelo = "Departamento";
             casasRegistradas[9].cuartos = 1;
             casasRegistradas[9].banos = 1;
             casasRegistradas[9].parqueaderos = "Si";
             casasRegistradas[9].espacioVerdes = "No";
-            casasRegistradas[9].precioCasa = 87000;
-
+            casasRegistradas[9].precioCasa = 80000;
             //Javier
             //casas Centro 
             //11
@@ -429,7 +428,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[19].espacioVerdes = "No";
             casasRegistradas[19].precioCasa = 55000;
             //casas al Sur
-            //21
+            //21 
             casasRegistradas[20].lugarCasa.sector = "Sur";
             casasRegistradas[20].lugarCasa.parques = 2;
             casasRegistradas[20].lugarCasa.escuelas = 3;
@@ -440,9 +439,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[20].banos = 1;
             casasRegistradas[20].parqueaderos = "Si";
             casasRegistradas[20].espacioVerdes = "No";
-            casasRegistradas[20].precioCasa = 98000;
-            //22
-            casasRegistradas[21].lugarCasa.sector = "Sur";
+            casasRegistradas[20].precioCasa = 45000;
+            //22 
+            casasRegistradas[21].lugarCasa.sector = "Sur";
             casasRegistradas[21].lugarCasa.parques = 1;
             casasRegistradas[21].lugarCasa.escuelas = 2;
             casasRegistradas[21].lugarCasa.centrosComerciales = 1;
@@ -452,9 +451,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[21].banos = 2;
             casasRegistradas[21].parqueaderos = "No";
             casasRegistradas[21].espacioVerdes = "Si";
-            casasRegistradas[21].precioCasa = 44000;
-            //23
-            casasRegistradas[22].lugarCasa.sector = "Sur";
+            casasRegistradas[21].precioCasa = 25000;
+            //23 
+            casasRegistradas[22].lugarCasa.sector = "Sur";
             casasRegistradas[22].lugarCasa.parques = 3;
             casasRegistradas[22].lugarCasa.escuelas = 2;
             casasRegistradas[22].lugarCasa.centrosComerciales = 1;
@@ -464,9 +463,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[22].banos = 3;
             casasRegistradas[22].parqueaderos = "Si";
             casasRegistradas[22].espacioVerdes = "Si";
-            casasRegistradas[22].precioCasa = 86000;
-            //24
-            casasRegistradas[23].lugarCasa.sector = "Sur";
+            casasRegistradas[22].precioCasa = 45000;
+            //24 
+            casasRegistradas[23].lugarCasa.sector = "Sur";
             casasRegistradas[23].lugarCasa.parques = 2;
             casasRegistradas[23].lugarCasa.escuelas = 1;
             casasRegistradas[23].lugarCasa.centrosComerciales = 2;
@@ -476,9 +475,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[23].banos = 1;
             casasRegistradas[23].parqueaderos = "No";
             casasRegistradas[23].espacioVerdes = "No";
-            casasRegistradas[23].precioCasa = 89000;
-            //25
-            casasRegistradas[24].lugarCasa.sector = "Sur";
+            casasRegistradas[23].precioCasa = 55000;
+            //25 
+            casasRegistradas[24].lugarCasa.sector = "Sur";
             casasRegistradas[24].lugarCasa.parques = 3;
             casasRegistradas[24].lugarCasa.escuelas = 1;
             casasRegistradas[24].lugarCasa.centrosComerciales = 2;
@@ -488,9 +487,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[24].banos = 2;
             casasRegistradas[24].parqueaderos = "Si";
             casasRegistradas[24].espacioVerdes = "No";
-            casasRegistradas[24].precioCasa = 55000;
-            //26
-            casasRegistradas[25].lugarCasa.sector = "Sur";
+            casasRegistradas[24].precioCasa = 35000;
+            //26 
+            casasRegistradas[25].lugarCasa.sector = "Sur";
             casasRegistradas[25].lugarCasa.parques = 1;
             casasRegistradas[25].lugarCasa.escuelas = 1;
             casasRegistradas[25].lugarCasa.centrosComerciales = 3;
@@ -500,9 +499,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[25].banos = 2;
             casasRegistradas[25].parqueaderos = "No";
             casasRegistradas[25].espacioVerdes = "Si";
-            casasRegistradas[25].precioCasa = 46000;
-            //27
-            casasRegistradas[26].lugarCasa.sector = "Sur";
+            casasRegistradas[25].precioCasa = 38000;
+            //27 
+            casasRegistradas[26].lugarCasa.sector = "Sur";
             casasRegistradas[26].lugarCasa.parques = 1;
             casasRegistradas[26].lugarCasa.escuelas = 3;
             casasRegistradas[26].lugarCasa.centrosComerciales = 1;
@@ -512,9 +511,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[26].banos = 1;
             casasRegistradas[26].parqueaderos = "No";
             casasRegistradas[26].espacioVerdes = "No";
-            casasRegistradas[26].precioCasa = 85000;
-            //28
-            casasRegistradas[27].lugarCasa.sector = "Sur";
+            casasRegistradas[26].precioCasa = 59000;
+            //28 
+            casasRegistradas[27].lugarCasa.sector = "Sur";
             casasRegistradas[27].lugarCasa.parques = 1;
             casasRegistradas[27].lugarCasa.escuelas = 2;
             casasRegistradas[27].lugarCasa.centrosComerciales = 1;
@@ -524,9 +523,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[27].banos = 2;
             casasRegistradas[27].parqueaderos = "Si";
             casasRegistradas[27].espacioVerdes = "No";
-            casasRegistradas[27].precioCasa = 43000;
-            //29
-            casasRegistradas[28].lugarCasa.sector = "Sur";
+            casasRegistradas[27].precioCasa = 60000;
+            //29 
+            casasRegistradas[28].lugarCasa.sector = "Sur";
             casasRegistradas[28].lugarCasa.parques = 3;
             casasRegistradas[28].lugarCasa.escuelas = 5;
             casasRegistradas[28].lugarCasa.centrosComerciales = 2;
@@ -536,9 +535,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[28].banos = 2;
             casasRegistradas[28].parqueaderos = "No";
             casasRegistradas[28].espacioVerdes = "No";
-            casasRegistradas[28].precioCasa = 90000;
-            //30
-            casasRegistradas[29].lugarCasa.sector = "Sur";
+            casasRegistradas[28].precioCasa = 70000;
+            //30 
+            casasRegistradas[29].lugarCasa.sector = "Sur";
             casasRegistradas[29].lugarCasa.parques = 2;
             casasRegistradas[29].lugarCasa.escuelas = 4;
             casasRegistradas[29].lugarCasa.centrosComerciales = 2;
@@ -548,7 +547,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].banos = 3;
             casasRegistradas[29].parqueaderos = "Si";
             casasRegistradas[29].espacioVerdes = "Si";
-            casasRegistradas[29].precioCasa = 54000;
+            casasRegistradas[29].precioCasa = 39000;
             //FIN DE CASAS REGISTRADAS
             try
             {
@@ -615,7 +614,8 @@ namespace VentasDeCasaUIO
                         //instruccion por si la busqueda no fue exitosa
                         if (txaBusqueda.Text.Length == 0)
                         {
-                            txaBusqueda.Text = persona1.nombre + ", Lo sentimos no contamos con una casa con esas caracteristicas, intentalo de nuevo";
+                            txaBusqueda.Text = "                    " + persona1.nombre + ", lo sentimos no contamos con una casa con esas caracteristicas. "
+                                + "\r\n" + "                            Cambia algunas caracteristicas o presiona en \"Intentelo de nuevo\".";
                         }
                     }
                     else
@@ -633,8 +633,9 @@ namespace VentasDeCasaUIO
 
                 MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-      
+
         }
+        //instruciones para el radio boton credito. 
         private void rbtnCredito_CheckedChanged(object sender, EventArgs e)
         {
             //para mostar el text de cuotas cuando este señanalado cuotas
@@ -665,7 +666,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[0].banos = 2;
             casasRegistradas[0].parqueaderos = "Si";
             casasRegistradas[0].espacioVerdes = "No";
-            casasRegistradas[0].precioCasa = 490000;
+            casasRegistradas[0].precioCasa = 70000;
             //2
             casasRegistradas[1].lugarCasa.sector = "Norte";
             casasRegistradas[1].lugarCasa.parques = 1;
@@ -677,7 +678,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[1].banos = 1;
             casasRegistradas[1].parqueaderos = "No";
             casasRegistradas[1].espacioVerdes = "No";
-            casasRegistradas[1].precioCasa = 25000;
+            casasRegistradas[1].precioCasa = 45000;
             //3
             casasRegistradas[2].lugarCasa.sector = "Norte";
             casasRegistradas[2].lugarCasa.parques = 2;
@@ -689,7 +690,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[2].banos = 2;
             casasRegistradas[2].parqueaderos = "Si";
             casasRegistradas[2].espacioVerdes = "Si";
-            casasRegistradas[2].precioCasa = 400000;
+            casasRegistradas[2].precioCasa = 75000;
             //4
             casasRegistradas[3].lugarCasa.sector = "Norte";
             casasRegistradas[3].lugarCasa.parques = 0;
@@ -701,7 +702,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[3].banos = 2;
             casasRegistradas[3].parqueaderos = "No";
             casasRegistradas[3].espacioVerdes = "No";
-            casasRegistradas[3].precioCasa = 25000;
+            casasRegistradas[3].precioCasa = 60000;
             //5
             casasRegistradas[4].lugarCasa.sector = "Norte";
             casasRegistradas[4].lugarCasa.parques = 1;
@@ -725,11 +726,11 @@ namespace VentasDeCasaUIO
             casasRegistradas[5].banos = 2;
             casasRegistradas[5].parqueaderos = "No";
             casasRegistradas[5].espacioVerdes = "Si";
-            casasRegistradas[5].precioCasa = 50000;
+            casasRegistradas[5].precioCasa = 40000;
             //7
             casasRegistradas[6].lugarCasa.sector = "Norte";
             casasRegistradas[6].lugarCasa.parques = 0;
-            casasRegistradas[6].lugarCasa.escuelas = 0;
+            casasRegistradas[6].lugarCasa.escuelas = 1;
             casasRegistradas[6].lugarCasa.centrosComerciales = 1;
             casasRegistradas[6].lugarCasa.transporte = 2;
             casasRegistradas[6].modelo = "Departamento";
@@ -737,7 +738,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[6].banos = 1;
             casasRegistradas[6].parqueaderos = "No";
             casasRegistradas[6].espacioVerdes = "No";
-            casasRegistradas[6].precioCasa = 955000;
+            casasRegistradas[6].precioCasa = 80000;
             //8
             casasRegistradas[7].lugarCasa.sector = "Norte";
             casasRegistradas[7].lugarCasa.parques = 1;
@@ -749,7 +750,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[7].banos = 2;
             casasRegistradas[7].parqueaderos = "Si";
             casasRegistradas[7].espacioVerdes = "Si";
-            casasRegistradas[7].precioCasa = 500000;
+            casasRegistradas[7].precioCasa = 90000;
             //9
             casasRegistradas[8].lugarCasa.sector = "Norte";
             casasRegistradas[8].lugarCasa.parques = 2;
@@ -761,20 +762,19 @@ namespace VentasDeCasaUIO
             casasRegistradas[8].banos = 3;
             casasRegistradas[8].parqueaderos = "No";
             casasRegistradas[8].espacioVerdes = "Si";
-            casasRegistradas[8].precioCasa = 450000;
+            casasRegistradas[8].precioCasa = 70000;
             //10
             casasRegistradas[9].lugarCasa.sector = "Norte";
             casasRegistradas[9].lugarCasa.parques = 0;
             casasRegistradas[9].lugarCasa.escuelas = 0;
             casasRegistradas[9].lugarCasa.centrosComerciales = 0;
-            casasRegistradas[9].lugarCasa.transporte = 0;
+            casasRegistradas[9].lugarCasa.transporte = 1;
             casasRegistradas[9].modelo = "Departamento";
             casasRegistradas[9].cuartos = 1;
             casasRegistradas[9].banos = 1;
             casasRegistradas[9].parqueaderos = "Si";
             casasRegistradas[9].espacioVerdes = "No";
-            casasRegistradas[9].precioCasa = 87000;
-
+            casasRegistradas[9].precioCasa = 80000;
             //Javier
             //casas Centro 
             //11
@@ -897,9 +897,8 @@ namespace VentasDeCasaUIO
             casasRegistradas[19].parqueaderos = "Si";
             casasRegistradas[19].espacioVerdes = "No";
             casasRegistradas[19].precioCasa = 55000;
-
             //casas al Sur
-            //21
+            //21 
             casasRegistradas[20].lugarCasa.sector = "Sur";
             casasRegistradas[20].lugarCasa.parques = 2;
             casasRegistradas[20].lugarCasa.escuelas = 3;
@@ -910,9 +909,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[20].banos = 1;
             casasRegistradas[20].parqueaderos = "Si";
             casasRegistradas[20].espacioVerdes = "No";
-            casasRegistradas[20].precioCasa = 98000;
-            //22
-            casasRegistradas[21].lugarCasa.sector = "Sur";
+            casasRegistradas[20].precioCasa = 45000;
+            //22 
+            casasRegistradas[21].lugarCasa.sector = "Sur";
             casasRegistradas[21].lugarCasa.parques = 1;
             casasRegistradas[21].lugarCasa.escuelas = 2;
             casasRegistradas[21].lugarCasa.centrosComerciales = 1;
@@ -922,9 +921,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[21].banos = 2;
             casasRegistradas[21].parqueaderos = "No";
             casasRegistradas[21].espacioVerdes = "Si";
-            casasRegistradas[21].precioCasa = 44000;
-            //23
-            casasRegistradas[22].lugarCasa.sector = "Sur";
+            casasRegistradas[21].precioCasa = 25000;
+            //23 
+            casasRegistradas[22].lugarCasa.sector = "Sur";
             casasRegistradas[22].lugarCasa.parques = 3;
             casasRegistradas[22].lugarCasa.escuelas = 2;
             casasRegistradas[22].lugarCasa.centrosComerciales = 1;
@@ -934,9 +933,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[22].banos = 3;
             casasRegistradas[22].parqueaderos = "Si";
             casasRegistradas[22].espacioVerdes = "Si";
-            casasRegistradas[22].precioCasa = 86000;
-            //24
-            casasRegistradas[23].lugarCasa.sector = "Sur";
+            casasRegistradas[22].precioCasa = 45000;
+            //24 
+            casasRegistradas[23].lugarCasa.sector = "Sur";
             casasRegistradas[23].lugarCasa.parques = 2;
             casasRegistradas[23].lugarCasa.escuelas = 1;
             casasRegistradas[23].lugarCasa.centrosComerciales = 2;
@@ -946,9 +945,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[23].banos = 1;
             casasRegistradas[23].parqueaderos = "No";
             casasRegistradas[23].espacioVerdes = "No";
-            casasRegistradas[23].precioCasa = 89000;
-            //25
-            casasRegistradas[24].lugarCasa.sector = "Sur";
+            casasRegistradas[23].precioCasa = 55000;
+            //25 
+            casasRegistradas[24].lugarCasa.sector = "Sur";
             casasRegistradas[24].lugarCasa.parques = 3;
             casasRegistradas[24].lugarCasa.escuelas = 1;
             casasRegistradas[24].lugarCasa.centrosComerciales = 2;
@@ -958,9 +957,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[24].banos = 2;
             casasRegistradas[24].parqueaderos = "Si";
             casasRegistradas[24].espacioVerdes = "No";
-            casasRegistradas[24].precioCasa = 55000;
-            //26
-            casasRegistradas[25].lugarCasa.sector = "Sur";
+            casasRegistradas[24].precioCasa = 35000;
+            //26 
+            casasRegistradas[25].lugarCasa.sector = "Sur";
             casasRegistradas[25].lugarCasa.parques = 1;
             casasRegistradas[25].lugarCasa.escuelas = 1;
             casasRegistradas[25].lugarCasa.centrosComerciales = 3;
@@ -970,9 +969,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[25].banos = 2;
             casasRegistradas[25].parqueaderos = "No";
             casasRegistradas[25].espacioVerdes = "Si";
-            casasRegistradas[25].precioCasa = 46000;
-            //27
-            casasRegistradas[26].lugarCasa.sector = "Sur";
+            casasRegistradas[25].precioCasa = 38000;
+            //27 
+            casasRegistradas[26].lugarCasa.sector = "Sur";
             casasRegistradas[26].lugarCasa.parques = 1;
             casasRegistradas[26].lugarCasa.escuelas = 3;
             casasRegistradas[26].lugarCasa.centrosComerciales = 1;
@@ -982,9 +981,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[26].banos = 1;
             casasRegistradas[26].parqueaderos = "No";
             casasRegistradas[26].espacioVerdes = "No";
-            casasRegistradas[26].precioCasa = 85000;
-            //28
-            casasRegistradas[27].lugarCasa.sector = "Sur";
+            casasRegistradas[26].precioCasa = 59000;
+            //28 
+            casasRegistradas[27].lugarCasa.sector = "Sur";
             casasRegistradas[27].lugarCasa.parques = 1;
             casasRegistradas[27].lugarCasa.escuelas = 2;
             casasRegistradas[27].lugarCasa.centrosComerciales = 1;
@@ -994,9 +993,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[27].banos = 2;
             casasRegistradas[27].parqueaderos = "Si";
             casasRegistradas[27].espacioVerdes = "No";
-            casasRegistradas[27].precioCasa = 43000;
-            //29
-            casasRegistradas[28].lugarCasa.sector = "Sur";
+            casasRegistradas[27].precioCasa = 60000;
+            //29 
+            casasRegistradas[28].lugarCasa.sector = "Sur";
             casasRegistradas[28].lugarCasa.parques = 3;
             casasRegistradas[28].lugarCasa.escuelas = 5;
             casasRegistradas[28].lugarCasa.centrosComerciales = 2;
@@ -1006,9 +1005,9 @@ namespace VentasDeCasaUIO
             casasRegistradas[28].banos = 2;
             casasRegistradas[28].parqueaderos = "No";
             casasRegistradas[28].espacioVerdes = "No";
-            casasRegistradas[28].precioCasa = 90000;
-            //30
-            casasRegistradas[29].lugarCasa.sector = "Sur";
+            casasRegistradas[28].precioCasa = 70000;
+            //30 
+            casasRegistradas[29].lugarCasa.sector = "Sur";
             casasRegistradas[29].lugarCasa.parques = 2;
             casasRegistradas[29].lugarCasa.escuelas = 4;
             casasRegistradas[29].lugarCasa.centrosComerciales = 2;
@@ -1018,7 +1017,7 @@ namespace VentasDeCasaUIO
             casasRegistradas[29].banos = 3;
             casasRegistradas[29].parqueaderos = "Si";
             casasRegistradas[29].espacioVerdes = "Si";
-            casasRegistradas[29].precioCasa = 54000;
+            casasRegistradas[29].precioCasa = 39000;
             //FIN DE CASAS REGISTRADAS
             try
             {
@@ -1031,7 +1030,7 @@ namespace VentasDeCasaUIO
             }
             catch (Exception)
             {
-                MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Verifica tus datos ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -1047,7 +1046,7 @@ namespace VentasDeCasaUIO
             txtEscuelas.Clear();
             txtCeCo.Clear();
             txtTransporte.Clear();
-            //borrar radio buton
+            //borrar la eleccion radio buton
             rbVivienda.Checked = false;
             rbCondominio.Checked = false;
             rbDepartamento.Checked = false;
@@ -1058,6 +1057,7 @@ namespace VentasDeCasaUIO
             rbNoP.Checked = false;
             rbSiE.Checked = false;
             rbNoE.Checked = false;
+            //borrar los texts de box de busqueda
             txaBusqueda.Clear();
             txtCuotas.Hide();
             lbCuotas.Hide();
