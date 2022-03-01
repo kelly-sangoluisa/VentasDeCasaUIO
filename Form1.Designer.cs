@@ -328,7 +328,7 @@
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(321, 459);
+            this.btnComprar.Location = new System.Drawing.Point(324, 482);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(88, 23);
             this.btnComprar.TabIndex = 23;
@@ -338,15 +338,15 @@
             // 
             // txaRecibo
             // 
-            this.txaRecibo.Location = new System.Drawing.Point(188, 488);
+            this.txaRecibo.Location = new System.Drawing.Point(188, 510);
             this.txaRecibo.Multiline = true;
             this.txaRecibo.Name = "txaRecibo";
-            this.txaRecibo.Size = new System.Drawing.Size(354, 80);
+            this.txaRecibo.Size = new System.Drawing.Size(354, 58);
             this.txaRecibo.TabIndex = 24;
             // 
             // txtCuotas
             // 
-            this.txtCuotas.Location = new System.Drawing.Point(603, 433);
+            this.txtCuotas.Location = new System.Drawing.Point(609, 456);
             this.txtCuotas.Name = "txtCuotas";
             this.txtCuotas.Size = new System.Drawing.Size(33, 20);
             this.txtCuotas.TabIndex = 42;
@@ -355,7 +355,7 @@
             // lbCuotas
             // 
             this.lbCuotas.AutoSize = true;
-            this.lbCuotas.Location = new System.Drawing.Point(548, 435);
+            this.lbCuotas.Location = new System.Drawing.Point(554, 458);
             this.lbCuotas.Name = "lbCuotas";
             this.lbCuotas.Size = new System.Drawing.Size(49, 13);
             this.lbCuotas.TabIndex = 41;
@@ -387,7 +387,7 @@
             // lblComprar
             // 
             this.lblComprar.AutoSize = true;
-            this.lblComprar.Location = new System.Drawing.Point(262, 407);
+            this.lblComprar.Location = new System.Drawing.Point(268, 430);
             this.lblComprar.Name = "lblComprar";
             this.lblComprar.Size = new System.Drawing.Size(220, 13);
             this.lblComprar.TabIndex = 38;
@@ -553,14 +553,14 @@
             this.txaBusqueda.Location = new System.Drawing.Point(110, 306);
             this.txaBusqueda.Multiline = true;
             this.txaBusqueda.Name = "txaBusqueda";
-            this.txaBusqueda.Size = new System.Drawing.Size(510, 98);
+            this.txaBusqueda.Size = new System.Drawing.Size(510, 121);
             this.txaBusqueda.TabIndex = 46;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.rbEfectivo);
             this.groupBox4.Controls.Add(this.rbCredito);
-            this.groupBox4.Location = new System.Drawing.Point(182, 420);
+            this.groupBox4.Location = new System.Drawing.Point(188, 443);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(360, 33);
             this.groupBox4.TabIndex = 47;
