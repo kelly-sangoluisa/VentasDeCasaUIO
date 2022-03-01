@@ -19,7 +19,7 @@ namespace VentasDeCasaUIO
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Form1 miInicio = new Form1();
+            VentasDeCasasUIO miInicio = new VentasDeCasasUIO();
             miInicio.Show();
             this.Close();
         }
