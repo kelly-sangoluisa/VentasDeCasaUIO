@@ -51,7 +51,7 @@
             this.txtTransporte = new System.Windows.Forms.TextBox();
             this.gboxModelo = new System.Windows.Forms.GroupBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.btnCompar = new System.Windows.Forms.Button();
+            this.btnComprar = new System.Windows.Forms.Button();
             this.txaRecibo = new System.Windows.Forms.TextBox();
             this.txtCuotas = new System.Windows.Forms.TextBox();
             this.lbCuotas = new System.Windows.Forms.Label();
@@ -316,14 +316,15 @@
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // btnCompar
+            // btnComprar
             // 
-            this.btnCompar.Location = new System.Drawing.Point(321, 459);
-            this.btnCompar.Name = "btnCompar";
-            this.btnCompar.Size = new System.Drawing.Size(88, 23);
-            this.btnCompar.TabIndex = 23;
-            this.btnCompar.Text = "Comprar";
-            this.btnCompar.UseVisualStyleBackColor = true;
+            this.btnComprar.Location = new System.Drawing.Point(321, 459);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(88, 23);
+            this.btnComprar.TabIndex = 23;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.UseVisualStyleBackColor = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnCompar_Click);
             // 
             // txaRecibo
             // 
@@ -389,6 +390,7 @@
             this.btnIntenteDeNuevo.TabIndex = 37;
             this.btnIntenteDeNuevo.Text = "Intentelo de nuevo";
             this.btnIntenteDeNuevo.UseVisualStyleBackColor = true;
+            this.btnIntenteDeNuevo.Click += new System.EventHandler(this.btnIntenteDeNuevo_Click);
             // 
             // btnBuscar
             // 
@@ -572,7 +574,7 @@
             this.Controls.Add(this.lblParqueaderos);
             this.Controls.Add(this.lblIngresaSector);
             this.Controls.Add(this.txaRecibo);
-            this.Controls.Add(this.btnCompar);
+            this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.gboxModelo);
             this.Controls.Add(this.txtTransporte);
@@ -635,7 +637,7 @@
         private System.Windows.Forms.TextBox txtTransporte;
         private System.Windows.Forms.GroupBox gboxModelo;
         private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Button btnCompar;
+        private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.TextBox txaRecibo;
         private System.Windows.Forms.TextBox txtCuotas;
         private System.Windows.Forms.Label lbCuotas;
