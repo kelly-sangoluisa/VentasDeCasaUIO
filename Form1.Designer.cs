@@ -75,6 +75,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txaBusqueda = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.linkLbManual = new System.Windows.Forms.LinkLabel();
             this.gboxModelo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -564,11 +565,22 @@
             this.groupBox4.TabIndex = 47;
             this.groupBox4.TabStop = false;
             // 
+            // linkLbManual
+            // 
+            this.linkLbManual.AutoSize = true;
+            this.linkLbManual.Location = new System.Drawing.Point(616, 20);
+            this.linkLbManual.Name = "linkLbManual";
+            this.linkLbManual.Size = new System.Drawing.Size(101, 13);
+            this.linkLbManual.TabIndex = 48;
+            this.linkLbManual.TabStop = true;
+            this.linkLbManual.Text = "Manual De Usuario ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 609);
+            this.Controls.Add(this.linkLbManual);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.txaBusqueda);
             this.Controls.Add(this.groupBox3);
@@ -670,6 +682,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txaBusqueda;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.LinkLabel linkLbManual;
     }
 }
 

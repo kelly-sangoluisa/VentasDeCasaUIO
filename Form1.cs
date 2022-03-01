@@ -54,7 +54,7 @@ namespace VentasDeCasaUIO
         public Form1()
         {
             InitializeComponent();
-            //Para ocultar al empezar el boton de cuotas y el label de cuotas
+            //Para al empezar ocultar el boton de cuotas y el label de cuotas
             txtCuotas.Hide();
             lbCuotas.Hide();
             //ocultamiento de btn confirmar hasta que cumpla con especificaciones como la busqueda
@@ -64,8 +64,8 @@ namespace VentasDeCasaUIO
             btnComprar.Enabled = false;
         }
         //llamada a la clase validadora de numeros y letras para su uso 
-        ValidadorDeNumerosLetras validar = new ValidadorDeNumerosLetras(); //constructor del validor
-       //clase para buscar la casa deseada en base a las casas registradas
+        ValidadorDeNumerosLetras validar = new ValidadorDeNumerosLetras(); //constructor del objeto validor
+      //clase para buscar la casa deseada en base a las casas registradas
         public void busquedaCasa(Casa[] casa2, int tamanio, Casa casaDeseada, Persona p1)
         {
             for (int i = 0; i < tamanio; i++)
@@ -128,7 +128,7 @@ namespace VentasDeCasaUIO
         }
         //clase para calcular el credito 
         public void CalcularCredito(Persona p1, int aux, Casa[] casas)
-        { 
+        {
             Credito credito = new Credito();//Constructor de un nuevo credito 
             credito.cuotasMaxima = 25;
             credito.presupuestoInicial = p1.presupuesto;
@@ -155,9 +155,9 @@ namespace VentasDeCasaUIO
             }
             else
             {
-                txaRecibo.Text = "Lo sentimos, " + p1.nombre + ", tu credito no se ha realizado sastifactoriamente ya que" + "\r\n"
-                    + "ya que nuestro sistema solo acepta maximo " + credito.cuotasMaxima + " cuotas "
-                    + "\r\n" + "   Intentalo de nuevo.";
+                txaRecibo.Text = "Lo sentimos, " + p1.nombre + ", tu credito no se ha realizado sastifactoriamente ya "
+                    + "que nuestro sistema solo acepta un maximo de " + credito.cuotasMaxima + " cuotas "
+                    + "\r\n" + "   INTENTELO DE NUEVO ";
             }
         }
         //clase para la eleccion de forma de pago 
@@ -165,13 +165,13 @@ namespace VentasDeCasaUIO
         {
             if (rbEfectivo.Checked)
             {
-                txaRecibo.Text = " El total a pagar sera de " + casas[aux].precioCasa;
+                txaRecibo.Text = "Nombre: " + p1.nombre + "\r\n" + "Total a pagar: " + casas[aux].precioCasa;
             }
             else if (rbCredito.Checked)
             {
                 CalcularCredito(p1, aux, casas);
             }
-            btnConfirmar.Show();
+            btnConfirmar.Show(); ////mostrando el boton confirmar 
         }
         //instrucciones para el boton confirmar 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -614,7 +614,8 @@ namespace VentasDeCasaUIO
                         //instruccion por si la busqueda no fue exitosa
                         if (txaBusqueda.Text.Length == 0)
                         {
-                            txaBusqueda.Text = persona1.nombre + ", Lo sentimos no contamos con una casa con esas caracteristicas, intentalo de nuevo";
+                            txaBusqueda.Text = "                    " + persona1.nombre + ", lo sentimos no contamos con una casa con esas caracteristicas. "
+                                + "\r\n" + "                            Cambia algunas caracteristicas o presiona en \"Intentelo de nuevo\".";
                         }
                     }
                     else
@@ -632,8 +633,9 @@ namespace VentasDeCasaUIO
 
                 MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-      
+
         }
+        //instruciones para el radio boton credito. 
         private void rbtnCredito_CheckedChanged(object sender, EventArgs e)
         {
             //para mostar el text de cuotas cuando este señanalado cuotas
@@ -1028,7 +1030,7 @@ namespace VentasDeCasaUIO
             }
             catch (Exception)
             {
-                MessageBox.Show("Llena todos los datos para mejores resultados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Verifica tus datos ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -1044,7 +1046,7 @@ namespace VentasDeCasaUIO
             txtEscuelas.Clear();
             txtCeCo.Clear();
             txtTransporte.Clear();
-            //borrar radio buton
+            //borrar la eleccion radio buton
             rbVivienda.Checked = false;
             rbCondominio.Checked = false;
             rbDepartamento.Checked = false;
@@ -1055,6 +1057,7 @@ namespace VentasDeCasaUIO
             rbNoP.Checked = false;
             rbSiE.Checked = false;
             rbNoE.Checked = false;
+            //borrar los texts de box de busqueda
             txaBusqueda.Clear();
             txtCuotas.Hide();
             lbCuotas.Hide();
